@@ -285,6 +285,7 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .ticks input:checked{background:var(--berry);border-color:var(--berry)}
 .ticks input:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
 .ticks label:has(input:checked){background:var(--hl)}
+#ticks{grid-template-columns:repeat(2,1fr)}@media (max-width:560px){#ticks{grid-template-columns:1fr}}
 .made{margin-top:28px;font-family:var(--serif);font-size:clamp(20px,2vw,26px);line-height:1.35;max-width:760px;opacity:0;transform:translateY(8px);transition:.5s}
 .made.on{opacity:1;transform:none}
 
@@ -297,6 +298,7 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .letter p{font-size:16px;line-height:1.7;margin:0 0 12px;color:var(--ink-2)}
 .letter p:first-child{font-family:var(--serif);font-size:20px;color:var(--ink);margin-bottom:14px}
 .letter p:first-child b{font-weight:500}
+.back .wrap.qwrap{display:block}.back .pq{background:#fff;box-shadow:var(--shadow)}.back .quotes{margin-top:56px}
 .letter .from{font-family:var(--hand);font-size:22px;font-weight:600;color:var(--berry);margin-top:4px;line-height:1}
 /* coming back: the note lands, the tape sticks, Nes signs it, the reel floats */
 @media (prefers-reduced-motion:no-preference){
@@ -941,7 +943,7 @@ section{padding:84px 0}
   <div class="wrap">
     <div>
       <h1 class="rv d1">Every day is a chance to <span class="wm">rebloom<svg viewBox="-20 -20 40 40" aria-hidden="true"><g fill="#F2BDB6"><ellipse rx="6.5" ry="10" cy="-9"/><ellipse rx="6.5" ry="10" cy="-9" transform="rotate(72)"/><ellipse rx="6.5" ry="10" cy="-9" transform="rotate(144)"/><ellipse rx="6.5" ry="10" cy="-9" transform="rotate(216)"/><ellipse rx="6.5" ry="10" cy="-9" transform="rotate(288)"/></g><circle r="5" fill="#B04A64"/></svg></span></h1>
-      <p class="lede rv d2"><b style="color:var(--ink);font-weight:500">30 days to finally hit the goals you keep putting off.</b> Pick up to three from Mind, Move, Nourish, Rest, Work and Connect. Check in daily with people on the same path and reset with me live every Sunday.</p>
+      <p class="lede rv d2"><b style="color:var(--ink);font-weight:500">Struggle to stay consistent, and never quite cracked why?</b> It's hard to do it alone. Rebloom is 30 days of doing it together: pick up to three goals, check in for five minutes a day and reset live every Sunday, with a small group of us helping each other stick to it.</p>
       <div class="ctas rv d3"><a class="btn berry" href="#join">Claim your spot <span class="ar">→</span></a><a class="btn ghost" href="#how-it-works">See how it works <span class="ar">→</span></a></div>
       <p class="fine rv d3">Only 20 founding spots · First month free when you claim yours</p>
     </div>
@@ -949,7 +951,7 @@ section{padding:84px 0}
     <div class="stage rv d2">
       <div class="arch"><img src="assets/nes-beach.webp" alt="Nes on a rocky beach at sunset, eyes closed, smiling" fetchpriority="high" width="960" height="1280"></div>
       <svg class="sunf" viewBox="-50 -50 100 100" aria-hidden="true"><g fill="#F3B23C"><ellipse rx="9" ry="22" cy="-24"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(30)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(60)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(90)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(120)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(150)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(180)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(210)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(240)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(270)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(300)"/><ellipse rx="9" ry="22" cy="-24" transform="rotate(330)"/></g><circle r="17" fill="#2E2638"/><g fill="#F3B23C" opacity=".55"><circle r="2" cx="-6" cy="-5"/><circle r="2" cx="5" cy="-7"/><circle r="2" cx="0" cy="2"/><circle r="2" cx="-8" cy="6"/><circle r="2" cx="8" cy="5"/></g></svg>
-      <div class="hi"><span>hi, I'm Nes.<br>I made this for<br>the you who's tired<br>of starting over x</span><svg viewBox="0 0 120 80" aria-hidden="true"><path d="M8 8 C 40 6, 80 20, 104 62" fill="none" stroke="#B04A64" stroke-width="2.2" stroke-linecap="round"/><path d="M92 58 L105 64 L108 50" fill="none" stroke="#B04A64" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="hi"><span>hi, I'm Nes.<br>I've started over more<br>times than I can count.<br>this is what finally helped x</span><svg viewBox="0 0 120 80" aria-hidden="true"><path d="M8 8 C 40 6, 80 20, 104 62" fill="none" stroke="#B04A64" stroke-width="2.2" stroke-linecap="round"/><path d="M92 58 L105 64 L108 50" fill="none" stroke="#B04A64" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <svg class="stems" viewBox="0 0 500 110" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
         <g stroke="#8FA876" stroke-width="2.5" fill="none" stroke-linecap="round"><path d="M40 110 C42 90,36 70,42 52"/><path d="M92 110 C88 92,96 80,92 66"/><path d="M410 110 C414 88,406 70,412 46"/><path d="M462 110 C458 96,466 84,460 72"/></g>
         <use href="#leaf" x="28" y="70" width="24" height="24" fill="#8FA876"/><use href="#leaf" x="414" y="70" width="24" height="24" fill="#8FA876" transform="scale(-1 1) translate(-850 0)"/>
@@ -967,66 +969,16 @@ section{padding:84px 0}
 <section style="padding-top:0" id="check">
   <div class="wrap">
     <div class="tickwrap rv"><figure class="snap abs right" style="--r:5deg;--w:160px;--r2:28px;--t:22px"><img src="assets/nes-yellow.webp" alt="Nes in a beanie and puffer coat, smiling over her shoulder by a yellow wall" style="object-position:50% 30%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>a cold day I showed up anyway</figcaption></figure>
-      <div class="eyebrow">A quick check</div>
-      <h2>Does this sound like you?</h2>
-      <p class="lede">Tap any that sound like you. Nothing gets saved.</p>
+      <div class="eyebrow">Who it's for</div>
+      <h2>This is for you if…</h2>
+      <p class="lede">Tap any that sound like you.</p>
       <div class="ticks" id="ticks">
-        <label style="--hl:var(--apricot-l)"><input type="checkbox">Great for a few weeks, then one busy week and I'm back at square one.</label>
+        <label style="--hl:var(--apricot-l)"><input type="checkbox">I'm great until life gets busy. One holiday and I'm off track.</label>
         <label style="--hl:var(--mint-l)"><input type="checkbox">I show up for everyone else. Me comes last.</label>
-        <label style="--hl:var(--butter-l)"><input type="checkbox">I keep waiting to feel ready. It never comes.</label>
+        <label style="--hl:var(--butter-l)"><input type="checkbox">I keep putting things off until I feel ready.</label>
+        <label style="--hl:var(--lilac-l)"><input type="checkbox">I've started and stopped so many times, I now struggle to believe I can do it.</label>
       </div>
       <p class="made" id="made" aria-live="polite">Me too. It's not a willpower problem. <span class="it">You've just been doing it alone.</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- CIRCLE -->
-<section class="circle" id="circle">
-  <div class="wrap">
-    <div class="cgrid">
-      <div>
-        <div class="eyebrow rv">The Rebloom Club</div>
-        <h2 class="rv d1">Goals stick <span class="it">when someone notices.</span></h2>
-        <p class="lede rv d2">What one WhatsApp group did for my gym habit, the Club does for your goals. A pod of six women, a photo or voice note when you show up, <b style="color:var(--ink)">a buddy</b> who checks in if you go quiet, and a live Sunday reset with me.</p>
-        <div class="rules">
-          <div class="rv"><b>What's said here, stays here</b><span>No screenshots, ever.</span></div>
-          <div class="rv d1"><b>No one's ahead</b><span>We cheer the 2-minute days as loudly as the big ones.</span></div>
-        </div>
-        <p style="margin-top:36px" class="rv"><a class="btn light" href="#join">Reserve a founding place <span class="ar">→</span></a></p>
-      </div>
-      <div class="podmap rv d2">
-      <div class="pod" aria-hidden="true">
-        <div class="ring"></div>
-        <div class="core"><svg viewBox="-20 -20 40 40"><use href="#fl6" x="-20" y="-20" width="40" height="40" fill="#F2BDB6" style="--fc:#F3B23C"/></svg><b>your pod</b></div>
-        <div class="mem" style="left:50%;top:8%;background:var(--lilac)"><svg viewBox="-20 -20 40 40" aria-hidden="true"><use href="#fl5" x="-20" y="-20" width="40" height="40" fill="#fff" style="--fc:#B04A64"/></svg><b>Mind</b></div>
-        <div class="mem" style="left:86%;top:29%;background:var(--apricot)"><svg viewBox="-20 -20 40 40" aria-hidden="true"><use href="#fl5" x="-20" y="-20" width="40" height="40" fill="#fff" style="--fc:#B04A64"/></svg><b>Move</b></div>
-        <div class="mem" style="left:86%;top:71%;background:var(--mint)"><svg viewBox="-20 -20 40 40" aria-hidden="true"><use href="#fl5" x="-20" y="-20" width="40" height="40" fill="#fff" style="--fc:#B04A64"/></svg><b>Nourish</b></div>
-        <div class="mem" style="left:50%;top:92%;background:var(--mist)"><svg viewBox="-20 -20 40 40" aria-hidden="true"><use href="#fl5" x="-20" y="-20" width="40" height="40" fill="#fff" style="--fc:#B04A64"/></svg><b>Rest</b></div>
-        <div class="mem" style="left:14%;top:71%;background:var(--butter)"><svg viewBox="-20 -20 40 40" aria-hidden="true"><use href="#fl5" x="-20" y="-20" width="40" height="40" fill="#fff" style="--fc:#B04A64"/></svg><b>Work</b></div>
-        <div class="mem" style="left:14%;top:29%;background:var(--blush)"><svg viewBox="-20 -20 40 40" aria-hidden="true"><use href="#fl5" x="-20" y="-20" width="40" height="40" fill="#fff" style="--fc:#B04A64"/></svg><b>Connect</b></div>
-      </div>
-      <p class="podcap">you pick three. your pod and your buddy cheer you on x</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROOF -->
-<section class="proof">
-  <div class="wrap">
-    <div class="center">
-      <div class="eyebrow rv">Proof it works</div>
-      <h2 class="rv d1">It worked when <span class="it">someone checked in.</span></h2>
-      <p class="lede rv d2">My health and fitness took a back seat once I started working. When it's personal, nobody checks in on you. So I booked a weekly session with a personal trainer in Bridgend, and joined a group chat where we posted every workout.</p>
-    </div>
-    <div class="pstats rv">
-      <div><i class="pi" style="--pc:var(--lilac-l)" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></i><b>1 year</b><span>my most consistent stretch, ever</span></div>
-      <div><i class="pi" style="--pc:var(--apricot-l)" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.8 3.6-6 7-6s6.2 2.2 7 6"/></svg></i><b>1 trainer</b><span>every week, checking in on me</span></div>
-      <div><i class="pi" style="--pc:var(--mint-l)" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19l1.3-3.4A7.5 7.5 0 1 1 9.2 18.4z"/><path d="M9 11.5h.01M12 11.5h.01M15 11.5h.01" stroke-width="2.6"/></svg></i><b>1 group chat</b><span>a photo every workout</span></div>
-    </div>
-    <div class="quotes swipe">
-      <figure class="pq rv"><blockquote>"It's been one year since I joined [the group], definitely the most consistent I've ever been."</blockquote><figcaption>Group chat member</figcaption></figure>
-      <figure class="pq rv d1"><blockquote>"It's really easy to lose track of doing the good things, so when I see that by the end of the month I'm hitting my workouts, it's been great to see, reflect on and be grateful for."</blockquote><figcaption>Group chat member</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1036,15 +988,50 @@ section{padding:84px 0}
   <div class="wrap">
     <a class="rc rv" style="--c:#fff" href="https://www.instagram.com/reel/Ddox5yrI0xT/" target="_blank" rel="noopener"><span class="still"><img src="assets/ig-1.jpg" alt="Still from this reel" loading="lazy"><span class="pl" aria-hidden="true">▶</span></span><div class="q">So I'm back. Not because I feel ready. Just because I decide to show up.</div><div class="foot"><span>Watch on Instagram →</span></div></a>
     <div>
-      <div class="eyebrow rv">The part every other plan skips</div>
-      <h2 class="rv d1">Consistency isn't a straight line. <span class="it">The coming back is the whole point.</span></h2>
-      <p class="lede rv d2">Most of us quit in week two. Here, you never start from zero.</p>
+      <div class="eyebrow rv">Why I made this</div>
+      <h2 class="rv d1">I only ever kept going <span class="it">when someone noticed.</span></h2>
+      <p class="lede rv d2">For years I'd start strong, fall off, then spend weeks beating myself up. Every time I got on a streak, life happened: a holiday, people coming over, something big. I'd go off track, and coming back felt so hard. Those are the times I wished I had a group keeping me going.</p>
       <div class="letter rv d3">
-        <p><b>Day 9. If you've wobbled, hello.</b></p>
-        <p>Missed a few days? You haven't failed. Do the 2-minute version of one goal today. It counts.</p>
+        <p><b>So here's what changed.</b></p>
+        <p>Therapy last year helped me see it. I grew up with a lot of self-limiting beliefs, and I had so much proof of not following through that I'd decided consistency just wasn't for me.</p>
+        <p>Then a few friends and I started helping each other get to the gym, posting a photo every time we went. Looking back on the past year, it's the most I've ever been. I've always done better when I'm part of something. Even at school, I studied better in the library than at home.</p>
+        <p>That gave me the courage to do something scary: share my thoughts out loud on Instagram. Since turning 30, I'm finally showing up for myself, and it feels so freeing.</p>
+        <p>It wasn't willpower. Old habits are hard to break. I just wasn't doing it alone, and someone noticed. My friends and I talk about this struggle all the time, and I don't think we're the only ones. As girls, we look for connection, for proof we're not in it alone. I want that for you too.</p>
         <div class="from">Nes x</div>
       </div>
-      <p class="twoline rv d4"><a href="#twomin">See the 2-minute versions →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- CIRCLE -->
+<section class="circle" id="circle">
+  <div class="wrap">
+    <div class="cgrid">
+      <div>
+        <div class="eyebrow rv">What you get</div>
+        <h2 class="rv d1">30 days of <span class="it">not doing it alone.</span></h2>
+        <p class="lede rv d2">You pick up to three goals. Here's what helps you stick to them.</p>
+        <div class="rules">
+          <div class="rv"><b>A small group, and a buddy</b><span>Post a photo when you show up: a book if you're reading, your water bottle if you're drinking more, the gym if you made it there. And someone checks in if you go quiet.</span></div>
+          <div class="rv d1"><b>A quick daily check-in</b><span>One question in the morning, one at night, so your goals don't slip out of mind. The doing is yours; this keeps you on track.</span></div>
+          <div class="rv d2"><b>A live Sunday reset with me</b><span>Every week. A kind look back and a realistic plan for the week ahead.</span></div>
+          <div class="rv d3"><b>Built for coming back</b><span>Missed a few days? You never start from zero. On busy days, the small version counts. <a href="#twomin" style="color:var(--berry)">See the small versions</a></span></div>
+        </div>
+        <p style="margin-top:36px" class="rv"><a class="btn light" href="#join">Reserve a founding place <span class="ar">→</span></a></p>
+      </div>
+      <div class="podmap rv d2">
+      <div class="pod" aria-hidden="true">
+        <div class="ring"></div>
+        <div class="core"><svg viewBox="-20 -20 40 40"><use href="#fl6" x="-20" y="-20" width="40" height="40" fill="#F2BDB6" style="--fc:#F3B23C"/></svg><b>your group</b></div>
+        <div class="mem" style="left:50%;top:8%;background:var(--lilac)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 14.2c.9 1.2 2.1 1.8 3.5 1.8s2.6-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01" stroke-width="2.6"/></svg><b>Mind</b></div>
+        <div class="mem" style="left:86%;top:29%;background:var(--apricot)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 8v8M17.5 8v8M3.5 10v4M20.5 10v4M6.5 12h11"/></svg><b>Move</b></div>
+        <div class="mem" style="left:86%;top:71%;background:var(--mint)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7.5c-1.5-1.3-4.8-1.4-6 1.2-1.3 2.8.3 7.6 2.7 9.4 1.1.8 2.1.6 3.3 0 1.2.6 2.2.8 3.3 0 2.4-1.8 4-6.6 2.7-9.4-1.2-2.6-4.5-2.5-6-1.2z"/><path d="M12 7.5c0-1.6.6-3 2-4"/></svg><b>Nourish</b></div>
+        <div class="mem" style="left:50%;top:92%;background:var(--mist)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10z"/></svg><b>Rest</b></div>
+        <div class="mem" style="left:14%;top:71%;background:var(--butter)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.6"/><path d="M2.5 19h19"/></svg><b>Work</b></div>
+        <div class="mem" style="left:14%;top:29%;background:var(--blush)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19.5s-7.5-4.4-7.5-9.6A4.1 4.1 0 0 1 12 7.6a4.1 4.1 0 0 1 7.5 2.3c0 5.2-7.5 9.6-7.5 9.6z"/></svg><b>Connect</b></div>
+      </div>
+      <p class="podcap">you pick three. your group and your buddy cheer you on x</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1076,11 +1063,11 @@ section{padding:84px 0}
         <span class="tag">Together · monthly</span>
         <h3>Rebloom Club</h3>
         <p class="for">For when you go further with people beside you.</p>
-        <div class="price"><b><sup>£</sup>59</b><span>a month</span></div><span class="pill">First month free</span>
+        <div class="price"><b><sup>£</sup>49</b><span>a month</span></div><span class="pill">First month free</span>
         <div class="seats" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p class="seatcap">20 founding spots</p>
         <ul>
           <li>Everything in the Kit</li>
-          <li>A pod of six, plus your buddy</li>
+          <li>A small group of six, plus your buddy</li>
           <li>Your progress link, tracked daily against your 30-day goals</li>
           <li>Live Sunday resets with me</li>
         </ul>
@@ -1113,7 +1100,7 @@ section{padding:84px 0}
       <h3>So Rebloom is built differently</h3>
       <ul>
         <li style="--pc:var(--lilac-l)"><b>Built for coming back</b>One missed day doesn't reset you.</li>
-        <li style="--pc:var(--apricot-l)"><b>A pod of six</b>Matched to the goals you pick.</li>
+        <li style="--pc:var(--apricot-l)"><b>A small group of six</b>Matched to the goals you pick.</li>
         <li style="--pc:var(--mint-l)"><b>A buddy</b>Who notices when you go quiet.</li>
         <li style="--pc:var(--butter-l)"><b>Me, personally</b>Your call, your progress link, every Sunday live.</li>
         <li style="--pc:var(--mist-l)"><b>No competition</b>The only person you're racing is you.</li>
@@ -1127,7 +1114,7 @@ section{padding:84px 0}
 
 <main data-view="how-it-works" hidden>
 <div class="sprig top" aria-hidden="true"><svg class="grow" viewBox="0 0 360 80"></svg></div>
-<nav class="onpage" aria-label="On this page"><span>On this page</span><a href="#season">Your 30 days</a><a href="#checkin">Daily check-in</a><a href="#builds">What 30 days builds</a><a href="#petals">The six petals</a><a href="#twomin">2-minute versions</a></nav>
+<nav class="onpage" aria-label="On this page"><span>On this page</span><a href="#season">Your 30 days</a><a href="#checkin">Daily check-in</a><a href="#builds">What 30 days builds</a><a href="#petals">The six petals</a><a href="#twomin">Small versions</a></nav>
 <!-- SEASON -->
 <section id="season">
   <div class="wrap" style="position:relative"><figure class="snap abs right" style="--r:6deg;--w:160px;--r2:0px;--t:-10px"><img src="assets/nes-fog.jpg" alt="Nes in the fog on a beach, arm raised, smiling back" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>day 30 won't look perfect. that's ok</figcaption></figure>
@@ -1141,13 +1128,13 @@ section{padding:84px 0}
       <ol class="pre">
         <li class="rv" style="--pc:var(--lilac-l)"><span class="pn">1</span><b>Fill in a short form</b><span>Your goals, and why now. One minute.</span></li>
         <li class="rv d1" style="--pc:var(--apricot-l)"><span class="pn">2</span><b>A 15-minute call with me</b><span>So I know what you want from these 30 days.</span></li>
-        <li class="rv d2" style="--pc:var(--blush-l)"><span class="pn">3</span><b>Meet your flower</b><span>A group call with your pod. Six women, six petals, one flower. You bloom together.</span></li>
+        <li class="rv d2" style="--pc:var(--blush-l)"><span class="pn">3</span><b>Meet your flower</b><span>A group call with your group. Six women, six petals, one flower. You bloom together.</span></li>
       </ol>
     </div>
     <div class="season">
       <svg class="vine" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M60 30 C 200 0, 300 60, 420 30 S 640 0, 760 30 S 1000 60, 1140 30" fill="none" stroke="#8FA876" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round"/></svg>
       <div class="stages">
-        <div class="stg rv"><div class="bud"><svg width="30" height="30" viewBox="-20 -20 40 40"><circle r="5" fill="#8FA876"/></svg></div><div class="d">Day 0</div><b>Start</b><p>Pick 3 goals and your 2-minute versions</p></div>
+        <div class="stg rv"><div class="bud"><svg width="30" height="30" viewBox="-20 -20 40 40"><circle r="5" fill="#8FA876"/></svg></div><div class="d">Day 0</div><b>Start</b><p>Pick 3 goals and your small versions</p></div>
         <div class="stg rv d1"><div class="bud"><svg width="40" height="40" viewBox="-20 -20 40 40"><path d="M0 14 V-2" stroke="#8FA876" stroke-width="2.5"/><use href="#leaf" x="-12" y="-14" width="22" height="22" fill="#8FA876"/></svg></div><div class="d">Days 1–7</div><b>Plant</b><p>Start tiny. Check in daily</p></div>
         <div class="stg mid rv d2"><div class="bud"><svg width="44" height="44" viewBox="-20 -20 40 40"><use href="#bud" x="-20" y="-20" width="40" height="40" fill="#B04A64"/></svg></div><div class="d">Days 8–14</div><b>Root</b><p>The messy middle. Your buddy checks in</p></div>
         <div class="stg rv d3"><div class="bud"><svg width="46" height="46" viewBox="-20 -20 40 40"><use href="#tulip" x="-20" y="-20" width="40" height="40" fill="#CDBDE6"/></svg></div><div class="d">Days 15–21</div><b>Grow</b><p>Stretch one goal a little</p></div>
@@ -1172,7 +1159,7 @@ section{padding:84px 0}
       <p class="lede rv d2">The questions you'll answer with me. Two words is enough.</p>
     </div>
     <div class="peekgrid swipe">
-      <article class="rv" style="--pc:var(--butter-l)"><div class="ptime">Morning · 2 minutes</div><h3>Before the day gets loud</h3><ol><li>Which goal needs me most today?</li><li>If today gets busy, what's my 2-minute version?</li></ol></article>
+      <article class="rv" style="--pc:var(--butter-l)"><div class="ptime">Morning · 2 minutes</div><h3>Before the day gets loud</h3><ol><li>Which goal needs me most today?</li><li>If today gets busy, what's my small version?</li></ol></article>
       <article class="rv d1" style="--pc:var(--lilac-l)"><div class="ptime">Evening · 3 minutes</div><h3>Closing the day kindly</h3><ol><li>What did I show up for today?</li><li>What got in the way?</li></ol></article>
       <article class="rv d2" style="--pc:var(--blush-l)"><div class="ptime">Sunday reset · 15 minutes</div><h3>Looking back, gently</h3><ol><li>What went well this week, even slightly?</li><li>Where did I wobble, and what did it teach me?</li><li>What's one thing I'll make smaller next week?</li></ol></article>
     </div>
@@ -1196,7 +1183,7 @@ section{padding:84px 0}
       <article class="rv d1" style="--pc:var(--blush);--pl:var(--blush-l)">
         <h3>People on the same path</h3>
         <p class="raw">I've only ever been consistent when someone noticed.</p>
-        <div class="convo"><span class="new">"Rough day. Did my 2 minutes."</span><span class="new" style="background:var(--mint-l)">"That counts. Proud of you 🌻"</span></div>
+        <div class="convo"><span class="new">"Rough day. Did my small version."</span><span class="new" style="background:var(--mint-l)">"That counts. Proud of you 🌻"</span></div>
       </article>
       <article class="rv d2" style="--pc:var(--butter);--pl:var(--butter-l)">
         <h3>One day at a time</h3>
@@ -1219,7 +1206,7 @@ section{padding:84px 0}
       <svg class="flower rv" viewBox="-250 -250 500 500" role="group" aria-label="Choose a petal" id="flower"></svg>
       <div class="pcard rv d2" aria-live="polite">
         <div class="swatch" id="psw"></div>
-        <div class="fade" id="pc"><h3>Mind</h3><p class="sub">Mental health and calm</p><dl><div><dt>Three questions to start</dt><ol><li>On an average day, how does your head feel: calm, busy, foggy or low?</li><li>How would you like to feel most days?</li><li>When does your mind feel loudest, and what usually sets it off?</li></ol></div><div><dt>An example intention</dt><dd>I start each day feeling calm and in control.</dd></div><div><dt>The 2-minute habit</dt><dd>A 2-minute voice brain-dump before bed</dd></div><div><dt>What you track</dt><dd>Mood, 1 to 5</dd></div></dl></div>
+        <div class="fade" id="pc"><h3>Mind</h3><p class="sub">Mental health and calm</p><dl><div><dt>Three questions to start</dt><ol><li>On an average day, how does your head feel: calm, busy, foggy or low?</li><li>How would you like to feel most days?</li><li>When does your mind feel loudest, and what usually sets it off?</li></ol></div><div><dt>An example intention</dt><dd>I start each day feeling calm and in control.</dd></div><div><dt>The small version</dt><dd>A quick voice brain-dump before bed</dd></div><div><dt>What you track</dt><dd>Mood, 1 to 5</dd></div></dl></div>
         <p class="note">No names, health details or money. Food and movement are never about weight.</p>
       </div>
     </div>
@@ -1229,15 +1216,15 @@ section{padding:84px 0}
 <!-- TWO MINUTE -->
 <section class="twomin-sec" id="twomin">
   <div class="wrap">
-    <div class="center"><div class="eyebrow rv">For your worst days</div><h2 class="rv d1">The 2-minute <span class="it">version.</span></h2></div>
+    <div class="center"><div class="eyebrow rv">For your worst days</div><h2 class="rv d1">The small <span class="it">version.</span></h2></div>
     <div class="twomin rv d4">
         <ul>
-          <li style="--pc:var(--apricot-l)"><b>Move</b>Dance to one song in the kitchen</li>
+          <li style="--pc:var(--apricot-l)"><b>Move</b>A 20-minute home workout on your mat</li>
           <li style="--pc:var(--lilac-l)"><b>Mind</b>Three slow breaths, then name how you feel</li>
           <li style="--pc:var(--mint-l)"><b>Nourish</b>A glass of water before your first coffee</li>
           <li style="--pc:var(--mist-l)"><b>Rest</b>Phone on charge outside the bedroom</li>
           <li style="--pc:var(--butter-l)"><b>Work</b>Write tomorrow's one priority</li>
-          <li style="--pc:var(--blush-l)"><b>Connect</b>Send one voice note to someone you love</li>
+          <li style="--pc:var(--blush-l)"><b>Connect</b>Coffee with a friend</li>
         </ul>
         <p>Small enough to do on your worst day. That's the whole point.</p>
       </div>
@@ -1371,7 +1358,7 @@ section{padding:84px 0}
       <details><summary>What about my privacy?</summary><p>The questions never ask for names, health details or money. Nobody reads your answers but you.</p></details>
       <details><summary>I've fallen off more times than I can count.</summary><p>Me too. Rebloom is built for coming back, not for people who never fall off.</p></details>
       <details><summary>Is this therapy?</summary><p>No. It's for goals and habits, done together. Therapy helped me, and I share how I found it for free on <a href="#my-story">my story page</a>.</p></details>
-      <details><summary>What if I miss a week?</summary><p>You rejoin with today's 2-minute version. Your 30 days can take 40.</p></details>
+      <details><summary>What if I miss a week?</summary><p>You rejoin with today's small version. Your 30 days can take 40.</p></details>
       <details><summary>Is it about weight or dieting?</summary><p>Never. No calories, weigh-ins or body goals.</p></details>
     </div>
   </div>
@@ -1422,7 +1409,7 @@ section{padding:84px 0}
       <div class="wl-step" data-step="1">
         <span class="wl-tag">20 founding spots · First month free</span>
         <h2 id="wl-t" tabindex="-1">Claim your spot. Your first month is on me.</h2>
-        <p>For anyone who's started strong and quietly disappeared on themselves. Pop your email in and I'll send my mini-guide, <b>5 questions to find your bloom</b>.</p>
+        <p>For anyone with a goal they keep meaning to get to. Pop your email in and I'll send my mini-guide, <b>5 questions to find your bloom</b>.</p>
         <form class="signup" id="wl-signup">
           <input type="email" id="wl-email" required placeholder="Your email address" aria-label="Your email address">
           <button class="btn berry" type="submit">Claim your spot <span class="ar">→</span></button>
@@ -1547,12 +1534,10 @@ document.querySelectorAll('form.signup[data-thanks]').forEach(f=>f.addEventListe
 // ticks
 const ticks=document.getElementById('ticks'),made=document.getElementById('made');
 const R=[
- 'Me too. I used to scroll and think everyone else got the "sticks to things" gene. They didn\'t. Most of them just had people cheering them on. <span class="it">You can have that too.</span>',
- 'That was my exact pattern. Three good months, one holiday, gone. Rebloom is built for that week. <span class="it">You don\'t restart. You come back.</span>',
- 'This one stings, doesn\'t it? I\'d never cancel on a friend, but I\'d cancel on myself without blinking. <span class="it">You deserve the promises you keep for everyone else.</span>',
- 'I know that voice so well. Here we practise flipping it: <span class="it">the bad day gets two seconds, the good day gets the credit.</span>',
- 'I waited years to feel ready. It never came. What finally worked was starting before I felt it, with something tiny. <span class="it">Ready comes after you begin.</span>',
- 'I\'ve been there, saying no to things I\'d have loved. You don\'t have to fix everything first. <span class="it">Small steps are how I found my way back to me.</span>'];
+ 'Me too. Honestly, I\'m still working on it. Three good months, one holiday, and I\'m back at the start. But I\'ve found something that works for me, and I\'m hoping it works for you too. <span class="it">You don\'t restart. You come back.</span>',
+ 'When I started my corporate career, work took almost all my focus. Add family, friends and everything else in your twenties, and it\'s so easy to put yourself last. <span class="it">Rebloom is built for exactly that part.</span>',
+ 'I waited years to feel ready. It never came. What finally worked was starting before I felt it, with something small. <span class="it">Ready comes after you begin.</span>',
+ 'That\'s been the story of my life. Outside of work, I\'ve struggled to stay consistent with so much: projects I started, plans I put off, procrastination, all of it. <span class="it">You\'re not broken. You just haven\'t had people beside you.</span>'];
 if(ticks)ticks.addEventListener('change',e=>{const ins=[...ticks.querySelectorAll('input')];let k=e.target.checked?ins.indexOf(e.target):-1;
  if(k<0)for(let j=ins.length-1;j>=0;j--)if(ins[j].checked){k=j;break}
  if(k<0){made.classList.remove('on');return}
@@ -1564,12 +1549,12 @@ if(chat)new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){chat.querySel
 
 // petal flower
 const P=[
- {n:'Mind',s:'Mental health and calm',c:'#CDBDE6',q:['On an average day, how does your head feel: calm, busy, foggy or low?','How would you like to feel most days?','When does your mind feel loudest, and what usually sets it off?'],i:'I start each day feeling calm and in control.',h:'A 2-minute voice brain-dump before bed',t:'Mood, 1 to 5'},
- {n:'Move',s:'Fitness and energy',c:'#F6C29A',q:['How does your body feel moving through a normal week right now?','What kind of movement do you enjoy, or used to?','What usually stops you moving, and what\'s the smallest version you could do anyway?'],i:'I move my body every day in ways I enjoy.',h:'A 10-minute walk or stretch, any time',t:'Moved today: yes or no'},
+ {n:'Mind',s:'Mental health and calm',c:'#CDBDE6',q:['On an average day, how does your head feel: calm, busy, foggy or low?','How would you like to feel most days?','When does your mind feel loudest, and what usually sets it off?'],i:'I start each day feeling calm and in control.',h:'A quick voice brain-dump before bed',t:'Mood, 1 to 5'},
+ {n:'Move',s:'Fitness and energy',c:'#F6C29A',q:['How does your body feel moving through a normal week right now?','What kind of movement do you enjoy, or used to?','What usually stops you moving, and what\'s the smallest version you could do anyway?'],i:'I move my body every day in ways I enjoy.',h:'A 20-minute home workout on your mat',t:'Moved today: yes or no'},
  {n:'Nourish',s:'Food that makes you feel good',c:'#B9CFA3',q:['How do you feel after most meals right now: energised, sluggish or rushed?','What would eating well look like for you, in a way that feels good?','When does eating well fall apart: busy days, evenings, eating on the go?'],i:'I eat in a way that makes me feel good.',h:'Add one colourful, home-made plate a day',t:'Nourishing meals, 0 to 3'},
  {n:'Rest',s:'Sleep and recovery',c:'#C3D8EC',q:['How rested do you feel when you wake up most mornings?','What would a good evening wind-down look like for you?','What happens in the hour before bed right now?'],i:'I protect my rest so I can show up fully.',h:'Screens down 20 minutes before bed',t:'Rested, 1 to 5'},
  {n:'Work',s:'Purpose, career and money',c:'#F3B23C',q:['How does a typical working day leave you feeling?','What would a good week at work look like, one you\'d be proud of?','Where does your day usually go off track?'],i:'I do focused work and switch off on time.',h:'Pick one priority before opening email',t:'Top priority done: yes or no'},
- {n:'Connect',s:'Love, family and friends',c:'#F2BDB6',q:['How connected do you feel to the people who matter to you right now?','What kind of connection are you missing most: friends, family or community?','What gets in the way of seeing people?'],i:'I make time for the people who light me up.',h:'Send one voice note to someone you love',t:'Connected today: yes or no'}];
+ {n:'Connect',s:'Love, family and friends',c:'#F2BDB6',q:['How connected do you feel to the people who matter to you right now?','What kind of connection are you missing most: friends, family or community?','What gets in the way of seeing people?'],i:'I make time for the people who light me up.',h:'Coffee with a friend',t:'Connected today: yes or no'}];
 const fl=document.getElementById('flower'),NS='http://www.w3.org/2000/svg';
 let html='';
 P.forEach((p,k)=>{const a=k*60,r=a*Math.PI/180,tx=Math.sin(r)*128,ty=-Math.cos(r)*128;
@@ -1581,7 +1566,7 @@ function show(k){const p=P[k];
  fl.querySelectorAll('.pt').forEach(g=>{const on=+g.dataset.k===k;g.classList.toggle('on',on);g.setAttribute('aria-pressed',on);g.style.transform=on?`translate(${Math.sin(k*Math.PI/3)*12}px,${-Math.cos(k*Math.PI/3)*12}px)`:''});
  const sel=fl.querySelector(`.pt[data-k="${k}"]`),ctr=fl.querySelector('circle'),hadFocus=document.activeElement===sel;fl.insertBefore(sel,ctr);if(hadFocus)sel.focus();
  psw.style.background=p.c;pc.style.opacity=0;
- setTimeout(()=>{pc.innerHTML=`<h3>${p.n}</h3><p class="sub">${p.s}</p><dl><div><dt>Three questions to start</dt><ol>${p.q.map(x=>`<li>${x}</li>`).join('')}</ol></div><div><dt>An example intention</dt><dd>${p.i}</dd></div><div><dt>The 2-minute habit</dt><dd>${p.h}</dd></div><div><dt>What you track</dt><dd>${p.t}</dd></div></dl>`;pc.style.opacity=1},180)}
+ setTimeout(()=>{pc.innerHTML=`<h3>${p.n}</h3><p class="sub">${p.s}</p><dl><div><dt>Three questions to start</dt><ol>${p.q.map(x=>`<li>${x}</li>`).join('')}</ol></div><div><dt>An example intention</dt><dd>${p.i}</dd></div><div><dt>The small version</dt><dd>${p.h}</dd></div><div><dt>What you track</dt><dd>${p.t}</dd></div></dl>`;pc.style.opacity=1},180)}
 fl.addEventListener('click',e=>{const g=e.target.closest('.pt');if(g)show(+g.dataset.k)});
 fl.addEventListener('keydown',e=>{const g=e.target.closest('.pt');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();show(+g.dataset.k)}});
 show(0);}
