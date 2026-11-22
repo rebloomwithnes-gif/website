@@ -298,6 +298,19 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .letter p:first-child{font-family:var(--serif);font-size:20px;color:var(--ink);margin-bottom:14px}
 .letter p:first-child b{font-weight:500}
 .letter .from{font-family:var(--hand);font-size:22px;font-weight:600;color:var(--berry);margin-top:4px;line-height:1}
+/* coming back: the note lands, the tape sticks, Nes signs it, the reel floats */
+@media (prefers-reduced-motion:no-preference){
+  .back .letter.rv.in{animation:land 1s cubic-bezier(.2,1.2,.4,1) both}
+  .back .letter.rv.in::before{animation:tape .5s .75s cubic-bezier(.2,.7,.2,1) both}
+  .back .letter.rv.in .from{display:inline-block;animation:sign 1.1s 1.1s ease-out both}
+  .back .rc.rv.in{animation:rise .9s cubic-bezier(.2,.7,.2,1) both,drift 7s 1.2s ease-in-out infinite}
+  .back .rc .pl{position:relative}
+  .back .rc .pl::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid currentColor;animation:pulse 2.2s 1.5s ease-out infinite;opacity:0;pointer-events:none}
+}
+@keyframes land{from{opacity:0;transform:translateY(-36px) rotate(-7deg)}to{opacity:1;transform:rotate(-1deg)}}
+@keyframes tape{from{transform:rotate(2deg) scaleX(0)}to{transform:rotate(2deg) scaleX(1)}}
+@keyframes sign{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes drift{0%,100%{translate:0 0;rotate:0deg}50%{translate:0 -10px;rotate:-.8deg}}
 .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
 .pills span{background:#fff;border-radius:99px;padding:8px 16px;font-size:14px;line-height:1.2;box-shadow:var(--shadow);white-space:nowrap}
 
@@ -967,24 +980,6 @@ section{padding:84px 0}
   </div>
 </section>
 
-<!-- COMING BACK -->
-<section class="back">
-  <div class="wrap">
-    <a class="rc rv" style="--c:#fff" href="https://www.instagram.com/reel/Ddox5yrI0xT/" target="_blank" rel="noopener"><span class="still"><img src="assets/ig-1.jpg" alt="Still from this reel" loading="lazy"><span class="pl" aria-hidden="true">▶</span></span><div class="q">So I'm back. Not because I feel ready. Just because I decide to show up.</div><div class="foot"><span>Watch on Instagram →</span></div></a>
-    <div>
-      <div class="eyebrow rv">The part every other plan skips</div>
-      <h2 class="rv d1">Consistency isn't a straight line. <span class="it">The coming back is the whole point.</span></h2>
-      <p class="lede rv d2">Most of us quit in week two. Here, you never start from zero.</p>
-      <div class="letter rv d3">
-        <p><b>Day 9. If you've wobbled, hello.</b></p>
-        <p>Missed a few days? You haven't failed. Do the 2-minute version of one goal today. It counts.</p>
-        <div class="from">Nes x</div>
-      </div>
-      <p class="twoline rv d4"><a href="#twomin">See the 2-minute versions →</a></p>
-    </div>
-  </div>
-</section>
-
 <!-- CIRCLE -->
 <section class="circle" id="circle">
   <div class="wrap">
@@ -1032,6 +1027,24 @@ section{padding:84px 0}
     <div class="quotes swipe">
       <figure class="pq rv"><blockquote>"It's been one year since I joined [the group], definitely the most consistent I've ever been."</blockquote><figcaption>Group chat member</figcaption></figure>
       <figure class="pq rv d1"><blockquote>"It's really easy to lose track of doing the good things, so when I see that by the end of the month I'm hitting my workouts, it's been great to see, reflect on and be grateful for."</blockquote><figcaption>Group chat member</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- COMING BACK -->
+<section class="back">
+  <div class="wrap">
+    <a class="rc rv" style="--c:#fff" href="https://www.instagram.com/reel/Ddox5yrI0xT/" target="_blank" rel="noopener"><span class="still"><img src="assets/ig-1.jpg" alt="Still from this reel" loading="lazy"><span class="pl" aria-hidden="true">▶</span></span><div class="q">So I'm back. Not because I feel ready. Just because I decide to show up.</div><div class="foot"><span>Watch on Instagram →</span></div></a>
+    <div>
+      <div class="eyebrow rv">The part every other plan skips</div>
+      <h2 class="rv d1">Consistency isn't a straight line. <span class="it">The coming back is the whole point.</span></h2>
+      <p class="lede rv d2">Most of us quit in week two. Here, you never start from zero.</p>
+      <div class="letter rv d3">
+        <p><b>Day 9. If you've wobbled, hello.</b></p>
+        <p>Missed a few days? You haven't failed. Do the 2-minute version of one goal today. It counts.</p>
+        <div class="from">Nes x</div>
+      </div>
+      <p class="twoline rv d4"><a href="#twomin">See the 2-minute versions →</a></p>
     </div>
   </div>
 </section>
