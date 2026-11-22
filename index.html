@@ -819,6 +819,16 @@ body.menu-open .mbar{transform:translateY(130%)!important}
 .twoline{margin-top:26px;font-weight:600;color:var(--ink-2)}
 .twoline a{color:var(--berry);text-decoration:none;white-space:nowrap}
 .twomin-sec{background:var(--blush-l)}
+.storylink{display:inline-flex;gap:6px;align-items:center;margin-top:14px;font-weight:600;font-size:15px;color:var(--berry);text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:1px}
+.explore{padding-top:20px}
+.exgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.exgrid a{position:relative;display:block;background:var(--pc);border-radius:20px;padding:20px 44px 20px 20px;text-decoration:none;color:var(--ink);transition:translate .25s}
+.exgrid a:hover{translate:0 -3px}
+.exgrid b{display:block;font-size:18px;margin-bottom:4px}
+.exgrid span{display:block;font-size:14.5px;line-height:1.45;color:var(--ink-2)}
+.exgrid i{position:absolute;right:18px;top:20px;font-style:normal;font-size:18px;color:var(--berry)}
+@media (max-width:900px){.exgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.exgrid{grid-template-columns:1fr;gap:10px}}
 .sci{margin-top:28px;background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:20px;padding:18px 20px}
 .sci>b{display:block;font-size:14px;letter-spacing:.04em;color:var(--berry);margin-bottom:8px}
 .intake input+fieldset,.intake input+.think{margin-top:16px}
@@ -1069,18 +1079,12 @@ section{padding:84px 0}
         <p>That gave me the courage to do something scary: share my thoughts out loud on Instagram. Since turning 30, I'm finally showing up for myself, and it feels so freeing.</p>
         <p>It wasn't willpower. Old habits are hard to break. I just wasn't doing it alone, and someone noticed. My friends and I talk about this struggle all the time, and I don't think we're the only ones. As girls, we look for connection, for proof we're not in it alone. I want that for you too.</p>
         <div class="from">Nes x</div>
+        <a class="storylink" href="#my-story">Read my full story <span class="ar">→</span></a>
       </div>
       <div class="sci rv d4">
         <b>Why this works: the psychology</b>
-        <p class="lead">Most of us don't need another gym plan or balanced meal idea. We have more information than ever. What we struggle with is consistency: showing up for long enough for it to stick. Psychologists call this the <i>intention–behaviour gap</i>. Knowing what to do isn't the problem. Doing it, again and again, is. That's the part Rebloom is built for:</p>
-        <ul>
-          <li><span>Knowing others struggle too is part of self-compassion, which helps people get back up after a slip.</span> <a href="https://self-compassion.org/" target="_blank" rel="noopener">Neff</a></li>
-          <li><span>Sharing your progress with others helps you keep going.</span> <a href="https://pubmed.ncbi.nlm.nih.gov/26479070/" target="_blank" rel="noopener">Harkin et al., 2016</a></li>
-          <li><span>People keep going for longer with a partner than on their own.</span> <a href="https://pubmed.ncbi.nlm.nih.gov/21808077/" target="_blank" rel="noopener">Feltz et al., 2011</a></li>
-          <li><span>Kindness after a setback, not guilt, makes you more likely to try again.</span> <a href="https://pubmed.ncbi.nlm.nih.gov/22645164/" target="_blank" rel="noopener">Breines &amp; Chen, 2012</a></li>
-          <li><span>Every time you show up, you build proof you can. That's how self-belief grows.</span> <a href="https://pubmed.ncbi.nlm.nih.gov/847061/" target="_blank" rel="noopener">Bandura, 1977</a></li>
-          <li><span>Something I learned in my own therapy: thoughts like "I always give up" aren't facts. They're old stories. You rewrite them by giving yourself enough evidence that they're not true. It's called cognitive restructuring, and every check-in is a bit more of that evidence.</span> <a href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/overview/" target="_blank" rel="noopener">NHS: about CBT</a></li>
-        </ul>
+        <p class="lead">Most of us don't need another gym plan or balanced meal idea. What we struggle with is consistency: showing up for long enough for it to stick. Psychologists call this the <i>intention–behaviour gap</i>. Knowing what to do isn't the problem. Doing it, again and again, is.</p>
+        <p class="lead" style="margin-bottom:0">And the research backs up what helped me. Sharing your progress <a href="https://pubmed.ncbi.nlm.nih.gov/26479070/" target="_blank" rel="noopener">(Harkin, 2016)</a> and having a partner <a href="https://pubmed.ncbi.nlm.nih.gov/21808077/" target="_blank" rel="noopener">(Feltz, 2011)</a> help people keep going. Kindness after a slip, not guilt, makes you more likely to try again <a href="https://pubmed.ncbi.nlm.nih.gov/22645164/" target="_blank" rel="noopener">(Breines &amp; Chen, 2012)</a>. And in therapy I learned that thoughts like "I always give up" aren't facts, just old stories. You rewrite them by giving yourself enough evidence that they're not true <a href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/overview/" target="_blank" rel="noopener">(NHS: CBT)</a>. Every photo you post is a bit more of that proof <a href="https://pubmed.ncbi.nlm.nih.gov/847061/" target="_blank" rel="noopener">(Bandura, 1977)</a>.</p>
       </div>
     </div>
   </div>
@@ -1133,10 +1137,10 @@ section{padding:84px 0}
         <div class="price"><b><sup>£</sup>19</b><span>one-off<br>yours to keep</span></div>
         <ul>
           <li>Me as your buddy, posting my photos alongside yours</li>
-          <li>24-page booklet, phone-sized</li>
-          <li>A daily nudge by email or WhatsApp</li>
+          <li>A phone-sized booklet: your goal and the why behind it, a tracker, and guided notes to write a letter to yourself on Day 1</li>
+          <li>A daily cheer by email or WhatsApp to help you do it</li>
+          <li>A weekly check-in call to see how you're doing and feeling</li>
           <li>Your own progress link from me</li>
-          <li>Day 9 rescue letter and voice note</li>
         </ul>
         <a class="btn ghost" href="#join">Claim your spot</a>
       </div>
@@ -1157,6 +1161,19 @@ section{padding:84px 0}
       </div>
     </div>
     <p class="early rv">Founding members get <b>the first month free</b> and the Kit for <b>£15</b>.</p>
+  </div>
+</section>
+
+<!-- EXPLORE MORE -->
+<section class="explore">
+  <div class="wrap">
+    <div class="center"><div class="eyebrow rv">Want to know more?</div><h2 class="rv d1">Have a look <span class="it">around.</span></h2></div>
+    <div class="exgrid">
+      <a class="rv" href="#why-rebloom" style="--pc:var(--lilac-l)"><b>Why Rebloom</b><span>Why doing it together works, and how it's different</span><i>→</i></a>
+      <a class="rv d1" href="#how-it-works" style="--pc:var(--apricot-l)"><b>How it works</b><span>Your 30 days, the daily photo and the four areas</span><i>→</i></a>
+      <a class="rv d2" href="#my-story" style="--pc:var(--mint-l)"><b>My story</b><span>The old voices, therapy, and how Rebloom started</span><i>→</i></a>
+      <a class="rv d3" href="#say-hello" style="--pc:var(--blush-l)"><b>Say hello</b><span>Write to me, or read the honest answers</span><i>→</i></a>
+    </div>
   </div>
 </section>
 
