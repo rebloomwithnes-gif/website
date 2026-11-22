@@ -8,6 +8,8 @@
 //   BOOKING_URL         optional, link to book the 15-minute call
 //   RESEND_AUDIENCE_ID  optional, Resend audience to keep the waitlist in
 
+const DEFAULT_BOOKING_URL = 'https://calendar.app.google/ibyeinDk3GVJXzP27';
+const GUIDE_URL = 'https://rebloomwithnes.co.uk/assets/rebloom-mini-guide.pdf';
 const MAX = { email: 254, name: 80, city: 40, now: 2000, how: 40, phone: 40 };
 
 export async function onRequestPost({ request, env }) {
@@ -71,10 +73,11 @@ export async function onRequestPost({ request, env }) {
     return json({ ok: false, error: 'send_failed' }, 502);
   }
 
-  // 2. Welcome email to her.
-  const booking = env.BOOKING_URL
-    ? `<p>Next is a 15-minute call. It's not an interview, just a chat about why you're here and what you're hoping changes. <a href="${esc(env.BOOKING_URL)}" style="color:#B04A64;font-weight:bold">Pick a time that suits you</a>.</p>`
-    : `<p>Next is a 15-minute call. It's not an interview, just a chat about why you're here and what you're hoping changes. I'll be in touch in the next few days to find a time.</p>`;
+  // 2. Welcome email to her, with the booking link and the mini-guide.
+  const bookingUrl = env.BOOKING_URL || DEFAULT_BOOKING_URL;
+  const booking = `<p>Next is a 15-minute call. It's not an interview, just a chat about why you're here and what you're hoping changes.</p>
+<p style="margin:22px 0"><a href="${esc(bookingUrl)}" style="background:#9B4F6A;color:#fff;text-decoration:none;padding:12px 22px;border-radius:99px;font-weight:bold;display:inline-block">Pick a time for our call</a></p>
+<p>And here's <a href="${GUIDE_URL}" style="color:#9B4F6A;font-weight:bold">your mini-guide</a>: what to expect from Rebloom, plus 5 questions to find your bloom. Have a look before our call if you like. Two words per question is plenty.</p>`;
   await sendEmail(env, {
     to: [email], reply_to: env.NOTIFY_EMAIL,
     subject: `Your Rebloom spot is saved, ${name}`,
