@@ -812,7 +812,11 @@ body.menu-open .mbar{transform:translateY(130%)!important}
 .twomin-sec{background:var(--blush-l)}
 .sci{margin-top:28px;background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:20px;padding:18px 20px}
 .sci>b{display:block;font-size:14px;letter-spacing:.04em;color:var(--berry);margin-bottom:8px}
-.intake input+fieldset{margin-top:16px}
+.intake input+fieldset,.intake input+.think{margin-top:16px}
+.think{margin:18px 0 4px;background:#fff;border:1px dashed var(--line);border-radius:18px;padding:16px 18px;font-size:14.5px;color:var(--ink-2)}
+.think b{display:block;color:var(--ink);margin-bottom:6px}
+.think ul{margin:0 0 8px;padding-left:18px;display:grid;gap:4px}
+.think span{font-family:var(--hand);font-weight:600;color:var(--berry);font-size:15px}
 .sci .lead{margin:0 0 14px;font-size:15.5px;line-height:1.55;color:var(--ink)}
 .sci .lead i{font-style:normal;font-weight:600;color:var(--berry)}
 .sci .lead a{font-size:12px;color:var(--muted);white-space:nowrap}
@@ -1470,23 +1474,24 @@ section{padding:84px 0}
       <div class="wl-step" data-step="2" hidden>
         <span class="wl-tag">Your spot is saved · one last step</span>
         <h2 tabindex="-1">Tell me a little about you</h2>
-        <p>Five quick questions, the same ones from your mini-guide. A few words each is plenty. I read every one, then we'll have a 15-minute call.</p>
+        <p>Three easy questions, mostly taps. The deeper stuff we'll talk through together on our 15-minute call.</p>
         <form class="intake" id="intake"><input name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
           <label class="q" for="in-name">What should I call you?</label>
           <input id="in-name" name="name" required placeholder="First name is fine" autocomplete="given-name">
 
-          <fieldset><legend class="q">1. Which part of your life feels heaviest right now? <span>Pick one</span></legend>
+          <fieldset><legend class="q">1. Which area would you like to start with? <span>Pick one</span></legend>
             <div class="topics" id="in-petals"><input type="radio" name="petal" id="in-p0" value="Mind"><label for="in-p0">Mind</label><input type="radio" name="petal" id="in-p1" value="Move"><label for="in-p1">Move</label><input type="radio" name="petal" id="in-p2" value="Nourish"><label for="in-p2">Nourish</label><input type="radio" name="petal" id="in-p3" value="Rest"><label for="in-p3">Rest</label></div>
             <p class="hint" id="in-hint" aria-live="polite"></p></fieldset>
 
-          <label class="q" for="in-now">2. If one thing felt lighter in 30 days, what would it be? And why now?</label>
-          <textarea id="in-now" name="now" placeholder="Messy is fine. Honest is the point."></textarea>
-          <label class="q" for="in-way">3. What usually gets in the way?</label>
-          <input id="in-way" name="way" placeholder="Late meetings, bad sleep, the week running away with you…">
-          <label class="q" for="in-small">4. What could your small version be? <span>(optional)</span></label>
-          <input id="in-small" name="small" placeholder="Small enough for your busiest day. Not sure yet is fine">
-          <label class="q" for="in-notice">5. Who would notice if you went quiet? <span>(optional)</span></label>
-          <input id="in-notice" name="notice" placeholder="If the answer is no one, that's what the group is for">
+          <fieldset><legend class="q">2. Which sounds most like you? <span>Pick one</span></legend>
+            <div class="topics"><input type="radio" name="pattern" id="in-pt0" value="I start strong, then fall off"><label for="in-pt0">I start strong, then fall off</label><input type="radio" name="pattern" id="in-pt1" value="I struggle to get started"><label for="in-pt1">I struggle to get started</label><input type="radio" name="pattern" id="in-pt2" value="Life keeps getting in the way"><label for="in-pt2">Life keeps getting in the way</label><input type="radio" name="pattern" id="in-pt3" value="A bit of everything"><label for="in-pt3">A bit of everything</label></div></fieldset>
+
+          <label class="q" for="in-now">3. In a few words, why now? <span>(optional)</span></label>
+          <input id="in-now" name="now" placeholder="A few words is plenty">
+
+          <div class="think"><b>Before our call, have a think about:</b>
+            <ul><li>If one thing felt lighter in 30 days, what would it be?</li><li>What usually gets in the way?</li><li>What could your small version be, for your busiest days?</li><li>Who would notice if you went quiet?</li></ul>
+            <span>No need to write anything down. We'll talk it through together.</span></div>
           <fieldset><legend class="q">Best way to call you?</legend>
             <div class="topics"><input type="radio" name="how" id="in-how0" value="WhatsApp call"><label for="in-how0">WhatsApp call</label><input type="radio" name="how" id="in-how1" value="Phone call"><label for="in-how1">Phone call</label><input type="radio" name="how" id="in-how2" value="Video call"><label for="in-how2">Video call</label></div></fieldset>
 
@@ -1568,7 +1573,7 @@ const petalBox=document.getElementById('in-petals'),hint=document.getElementById
 if(petalBox)petalBox.addEventListener('change',e=>{const on=petalBox.querySelectorAll('input:checked');if(on.length>3){e.target.checked=false;hint.textContent='Three is plenty to start with. You can swap next season.'}else hint.textContent=''});
 const intake=document.getElementById('intake');
 if(intake)intake.addEventListener('submit',async e=>{e.preventDefault();const btn=intake.querySelector('button[type=submit]'),v=n=>{const x=intake.querySelector(`[name="${n}"]:checked`);return x?x.value:''};
- const data={stage:'full',email:document.getElementById('wl-email').value,name:document.getElementById('in-name').value,way:document.getElementById('in-way').value,small:document.getElementById('in-small').value,notice:document.getElementById('in-notice').value,petals:[...intake.querySelectorAll('[name="petal"]:checked')].map(x=>x.value),now:document.getElementById('in-now').value,how:v('how'),phone:document.getElementById('in-phone').value,consent:document.getElementById('in-ok').checked,company:(intake.querySelector('[name="company"]')||{}).value||''};
+ const data={stage:'full',email:document.getElementById('wl-email').value,name:document.getElementById('in-name').value,pattern:v('pattern'),petals:[...intake.querySelectorAll('[name="petal"]:checked')].map(x=>x.value),now:document.getElementById('in-now').value,how:v('how'),phone:document.getElementById('in-phone').value,consent:document.getElementById('in-ok').checked,company:(intake.querySelector('[name="company"]')||{}).value||''};
  if(!data.email){goStep(1);return}
  btn.disabled=true;hint.textContent='Sending…';const r=await postForm('/api/signup',data);btn.disabled=false;
  if(r.ok){hint.textContent='';goStep(3)}else hint.textContent="Sorry, that didn't send. Please try again, or DM me on Instagram @makingsensewithnes."});
