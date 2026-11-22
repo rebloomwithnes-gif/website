@@ -276,6 +276,17 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .ighead h2{margin:0}
 /* ticks */
 .tickwrap{background:#fff;border-radius:var(--r-lg);padding:clamp(28px,5vw,64px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.tickdrop summary{list-style:none;display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:14px 22px;border-radius:999px;background:var(--bg);border:1.5px solid var(--berry);color:var(--berry);font-weight:600;font-size:16px;cursor:pointer;transition:background .25s}
+.tickdrop summary::-webkit-details-marker{display:none}
+.tickdrop summary::after{display:none}
+#check details.tickdrop{border:0}
+.tickdrop .made{margin-bottom:0}
+.tickdrop summary{font-family:inherit;justify-content:flex-start}
+.tickdrop summary:hover{background:#fff}
+.tickdrop .chev{width:9px;height:9px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-2px,-2px);transition:transform .25s}
+.tickdrop[open] .chev{transform:rotate(-135deg) translate(-2px,-2px)}
+.tickdrop[open] summary{margin-bottom:6px}
+.tickdrop .lede{margin-top:18px}
 .ticks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
 @media (max-width:900px){.ticks{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.ticks{grid-template-columns:1fr}}
@@ -1052,6 +1063,8 @@ section{padding:84px 0}
     <div class="tickwrap rv"><figure class="snap abs right" style="--r:5deg;--w:160px;--r2:28px;--t:22px"><img src="assets/nes-yellow.webp" alt="Nes in a beanie and puffer coat, smiling over her shoulder by a yellow wall" style="object-position:50% 30%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>a cold day I showed up anyway</figcaption></figure>
       <div class="eyebrow">Who it's for</div>
       <h2>This is for you if…</h2>
+      <details class="tickdrop">
+      <summary>See if it sounds like you <span class="chev" aria-hidden="true"></span></summary>
       <p class="lede">Tap any that sound like you.</p>
       <div class="ticks" id="ticks">
         <label style="--hl:var(--apricot-l)"><input type="checkbox">I'm great until life gets busy. One holiday and I'm off track.</label>
@@ -1060,6 +1073,7 @@ section{padding:84px 0}
         <label style="--hl:var(--lilac-l)"><input type="checkbox">I've started and stopped so many times, I now struggle to believe I can do it.</label>
       </div>
       <p class="made" id="made" aria-live="polite">Me too. It's not a willpower problem. <span class="it">You've just been doing it alone.</span></p>
+      </details>
     </div>
   </div>
 </section>
@@ -1327,12 +1341,6 @@ section{padding:84px 0}
       <div class="p1"><img src="assets/nes-grass.jpg" alt="Nes lying on the grass, eyes closed, smiling" style="object-position:50% 40%"><div class="cap">happiest with my back on the grass x</div></div>
     </div>
     <div class="anno anno-story" aria-hidden="true"><svg viewBox="0 0 90 60"><path d="M70 54 C 40 52, 18 36, 16 8" fill="none" stroke="#B04A64" stroke-width="2.2" stroke-linecap="round"/><path d="M8 18 L16 6 L26 16" fill="none" stroke="#B04A64" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>happiest with my back on the grass.<br>this is the me I keep coming back to x</span></div>
-    <div class="mcol">
-      <figure class="snap rv" style="--r:-4deg"><img src="assets/nes-sunset.jpg" alt="Nes on a clifftop at sunset, arms wide, boats in the bay below" style="object-position:50% 70%" loading="lazy"><figcaption>slowing down to enjoy where I am</figcaption></figure>
-      <figure class="snap rv" style="--r:2deg"><img src="assets/nes-hammock.jpg" alt="Nes laughing in a hammock among trees and wildflowers" loading="lazy"><figcaption>rest counts too</figcaption></figure>
-      <figure class="snap rv" style="--r:-2deg"><img src="assets/nes-paris.jpg" alt="Nes leaning out of a stone tower above a city, smiling" style="object-position:30% 40%" loading="lazy"><figcaption>some days you get the view</figcaption></figure>
-      <figure class="snap rv" style="--r:-3deg"><img src="assets/nes-sunhat.jpg" alt="Nes on a beach at sunset, the sun just above her hat" style="object-position:50% 40%" loading="lazy"><figcaption>the sun always comes back</figcaption></figure>
-    </div>
     </div>
     <div>
       <div class="eyebrow rv">Meet Nes</div>
@@ -1340,15 +1348,12 @@ section{padding:84px 0}
       <div class="story rv d2">
         <p>Can I be honest with you?</p>
         <p>I grew up with other people's voices in my head, telling me who I was and what I could and couldn't do. I didn't have the words for it then, but they were self-limiting beliefs. I'd be on track for three months, fall off, then spend weeks beating myself up. Maybe you know that loop too.</p>
-        <p>Then I built a career in corporate and everything else took a back seat. So much of my life happened in my head, not out in the world.</p>
-        <div class="mfan" aria-hidden="true"><figure class="snap" style="--r:-7deg;--w:34%"><img src="assets/nes-sunset.jpg" alt="" style="object-position:50% 70%" loading="lazy"></figure><figure class="snap" style="--r:-3deg;--w:34%"><img src="assets/nes-hammock.jpg" alt="" loading="lazy"></figure><figure class="snap" style="--r:6deg;--w:34%;--y:-6px"><img src="assets/nes-sunhat.jpg" alt="" style="object-position:50% 40%" loading="lazy"></figure></div>
-        <p>Every time I didn't stick with something, my brain kept the receipt. So when I started again, it already "knew" how it would end. It took me years to see those scripts weren't true. <span class="it">They were just old.</span></p>
+        <p>Then I built a career in corporate and everything else took a back seat. So much of my life happened in my head, not out in the world.</p>        <p>Every time I didn't stick with something, my brain kept the receipt. So when I started again, it already "knew" how it would end. It took me years to see those scripts weren't true. <span class="it">They were just old.</span></p>
         <p>It was only after I moved away from home and started questioning things that I began rewiring how I think. And I saw how much those old voices shape our day to day: what we try, what we put off, what we believe we can stick to.</p>
         <p>Later, in therapy, I found out there's a name for what I'd started doing: cognitive restructuring. Noticing an old thought, asking if it's even true, and giving yourself enough proof to write a new one.</p>
+        <p>I'm still a work in progress. I still catch myself waiting to feel ready. But it's made me so curious about how we think, and why we do what we do. So now I'm learning behavioural psychology properly and working towards getting certified, so I can bring what I learn back into Rebloom.</p>
         <p>The other thing I noticed? I only ever kept going when someone noticed. So I built Rebloom for you, and for me. Accountability that doesn't cost the earth, a group that sees you show up, and me right there with you, sharing what's working as I go.</p>
-        <p>I'm an August Leo. Sunflowers, sunny energy, and "blooming" in my bio for as long as I can remember.</p>
-        <div class="mfan" aria-hidden="true"><figure class="snap" style="--r:4deg;--w:52%"><img src="assets/nes-paris.jpg" alt="" style="object-position:30% 40%" loading="lazy"></figure></div>
-        <p>Lately, some days it felt like faking it. But nobody stays in bloom forever. That's where the name comes from. Not blooming. <em>Re</em>blooming. Choosing it again, especially on the days you don't feel it.</p>
+        <p>I'm an August Leo. Sunflowers, sunny energy, and "blooming" in my bio for as long as I can remember.</p>        <p>Lately, some days it felt like faking it. But nobody stays in bloom forever. That's where the name comes from. Not blooming. <em>Re</em>blooming. Choosing it again, especially on the days you don't feel it.</p>
         <p>Every morning you wake up, you get another go. So do I.</p>
       </div>
       <div class="rv d4" style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#say-hello">Say hello <span class="ar">→</span></a><a class="btn ghost" href="https://www.instagram.com/makingsensewithnes/" target="_blank" rel="noopener">@makingsensewithnes</a></div>
