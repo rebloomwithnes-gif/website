@@ -64,7 +64,7 @@ section{padding:120px 0;position:relative}
 
 /* announcement + nav */
 .announce{background:var(--ink);color:#EDE8F2;font-size:13px;text-align:center;padding:9px 16px}
-.announce b{color:var(--butter);font-weight:600}
+.announce b{color:var(--blush);font-weight:600}
 nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;transition:background .3s,box-shadow .3s}
 nav.top.scrolled{background:rgba(251,245,234,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 var(--line)}
 nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
@@ -480,7 +480,7 @@ nav.top .links a[aria-current="page"]::after{right:0}
 @media (max-width:600px){.strip{margin:40px -18px 0;padding:20px 18px 50px}}
 .pola .tape{position:absolute;top:-12px;left:30%;width:100px;height:26px;background:rgba(205,189,230,.85);transform:rotate(-6deg);z-index:3}
 .story p{font-size:17px;color:var(--ink-2);margin-bottom:16px}
-.story p:first-child::first-letter{font-family:var(--serif);font-size:3.2em;float:left;line-height:.9;margin:6px 10px 0 0;color:var(--berry)}
+.story p:first-child{font-family:var(--hand);font-size:1.3em;color:var(--berry);margin-bottom:.4em}
 .draftnote{font-size:13px;color:var(--berry);border:1.5px dashed var(--blush);border-radius:var(--r-sm);padding:10px 14px;margin:8px 0 26px;background:var(--blush-l)}
 .story-ph{border:1.5px dashed var(--berry);border-radius:var(--r-md);padding:20px 22px;background:var(--blush-l);font-size:15px;margin:24px 0 28px}
 .mreels{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:100px}
@@ -609,19 +609,19 @@ footer .legal{flex-basis:100%;border-top:1px solid #3A3446;padding-top:22px;disp
 .whygrid article[style*="butter-l"]{background:#fff}
 .whygrid h3{font-size:21px;margin-bottom:8px}
 .whygrid p{margin:0;color:var(--ink-2)}
-.diff{margin-top:24px;background:#fff;border-radius:var(--r-lg);padding:30px 30px 18px;box-shadow:var(--shadow)}
+.diff{margin-top:24px;background:#fff;border-radius:var(--r-lg);padding:30px;box-shadow:var(--shadow)}
 .diff h3{font-size:24px;margin-bottom:14px}
-.diff ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px}
-@media (max-width:760px){.diff ul{grid-template-columns:1fr}.diff{padding:24px 20px 12px}}
-.diff li{position:relative;padding-left:26px;color:var(--ink-2);margin-bottom:6px}
-.diff li::before{content:"✿";position:absolute;left:0;top:0;color:var(--berry)}
-.diff li b{color:var(--ink);display:block}
+.diff ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:calc(100% - 250px)}
+@media (max-width:960px){.diff ul{max-width:none}}
+@media (max-width:760px){.diff ul{grid-template-columns:1fr}.diff{padding:24px 20px 20px}}
+.diff li{background:var(--pc);border-radius:var(--r-md);padding:16px 18px;color:var(--ink-2);font-size:15px;line-height:1.4}
+.diff li b{color:var(--ink);display:block;font-size:17px;margin-bottom:2px}
 .diff{position:relative}.diff::after{content:"";display:block;clear:both}
 .dsnap{float:right;--w:210px;margin:-56px -6px 12px 28px}
 @media (max-width:760px){.dsnap{float:none;--w:170px;margin:-44px auto 18px}}
 /* check-in sneak peek */
 .peek{padding-top:40px}
-.peekgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px;align-items:start}
+.peekgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px;align-items:stretch}
 @media (max-width:900px){.peekgrid{grid-template-columns:1fr}}
 .peekgrid article{background:var(--pc);border-radius:var(--r-lg);padding:28px 26px}
 .peekgrid .ptime{font-size:13px;font-weight:700;color:var(--berry);margin-bottom:6px}
@@ -730,7 +730,7 @@ html.wl-open{overflow:hidden}
 .pstats div{background:#fff;border-radius:var(--r-md);padding:22px 24px;box-shadow:var(--shadow);text-align:center}
 .pstats b{display:block;font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.1}
 .pstats span{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:20px auto 0;max-width:1100px}
 @media (max-width:900px){.quotes{grid-template-columns:1fr}}
 .pq{margin:0;background:var(--blush-l);border-radius:var(--r-lg);padding:26px}
 .pq blockquote{margin:0;font-family:var(--serif);font-size:19px;line-height:1.45}
@@ -889,6 +889,16 @@ section{padding:84px 0}
 .seats{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;max-width:260px;margin:0 0 10px}
 .seats i{width:auto;height:auto;aspect-ratio:1}
 .seatcap{margin:0 0 26px;font-size:14px;color:#B9B1C4}
+
+/* before day 0 */
+.prestart{margin-top:44px}
+.pretag{font-family:var(--hand);color:var(--berry);font-size:20px;text-align:center;margin-bottom:14px}
+.pre{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.pre li{background:var(--pc);border-radius:var(--r-lg);padding:22px 22px 24px;display:flex;flex-direction:column;gap:6px}
+.pre .pn{width:30px;height:30px;border-radius:50%;background:#fff;color:var(--berry);font-weight:700;display:grid;place-items:center;font-size:14px;margin-bottom:6px}
+.pre b{font-size:18px;color:var(--ink);font-weight:600}
+.pre li>span:last-child{color:var(--ink-2);font-size:15px;line-height:1.45}
+@media (max-width:760px){.pre{grid-template-columns:1fr}}
 </style>
 <!-- reusable flowers -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -918,8 +928,8 @@ section{padding:84px 0}
   <div class="wrap">
     <div>
       <h1 class="rv d1">Every day is a chance to <span class="wm">rebloom<svg viewBox="-20 -20 40 40" aria-hidden="true"><g fill="#F2BDB6"><ellipse rx="6.5" ry="10" cy="-9"/><ellipse rx="6.5" ry="10" cy="-9" transform="rotate(72)"/><ellipse rx="6.5" ry="10" cy="-9" transform="rotate(144)"/><ellipse rx="6.5" ry="10" cy="-9" transform="rotate(216)"/><ellipse rx="6.5" ry="10" cy="-9" transform="rotate(288)"/></g><circle r="5" fill="#B04A64"/></svg></span></h1>
-      <p class="lede rv d2">Stay on track. Get back on track. Or finally start. We put ourselves last and nobody asks how we’re doing. So I built a place that does. <b style="color:var(--ink);font-weight:600">A heart to heart with women like you.</b></p>
-      <div class="ctas rv d3"><a class="btn berry" href="#join">Claim your spot <span class="ar">→</span></a><a class="btn ghost" href="#check">Show me around <span class="ar">↓</span></a></div>
+      <p class="lede rv d2"><b style="color:var(--ink);font-weight:500">30 days to finally hit the goals you keep putting off.</b> Pick up to three from Mind, Move, Nourish, Rest, Work and Connect. Check in daily with people on the same path and reset with me live every Sunday.</p>
+      <div class="ctas rv d3"><a class="btn berry" href="#join">Claim your spot <span class="ar">→</span></a><a class="btn ghost" href="#how-it-works">See how it works <span class="ar">→</span></a></div>
       <p class="fine rv d3">Only 20 founding spots · First month free when you claim yours</p>
     </div>
 
@@ -946,16 +956,13 @@ section{padding:84px 0}
     <div class="tickwrap rv"><figure class="snap abs right" style="--r:5deg;--w:160px;--r2:28px;--t:22px"><img src="assets/nes-yellow.webp" alt="Nes in a beanie and puffer coat, smiling over her shoulder by a yellow wall" style="object-position:50% 30%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>a cold day I showed up anyway</figcaption></figure>
       <div class="eyebrow">A quick check</div>
       <h2>Does this sound like you?</h2>
-      <p class="lede">Be honest. Nobody's watching and nothing gets saved. Tap any that sound like you.</p>
+      <p class="lede">Tap any that sound like you. Nothing gets saved.</p>
       <div class="ticks" id="ticks">
-        <label style="--hl:var(--lilac-l)"><input type="checkbox">I scroll everyone else's wins and think, "that's not me."</label>
-        <label style="--hl:var(--apricot-l)"><input type="checkbox">Great for a few weeks. Then one busy week and I'm back at square one.</label>
+        <label style="--hl:var(--apricot-l)"><input type="checkbox">Great for a few weeks, then one busy week and I'm back at square one.</label>
         <label style="--hl:var(--mint-l)"><input type="checkbox">I show up for everyone else. Me comes last.</label>
-        <label style="--hl:var(--mist-l)"><input type="checkbox">A good day gets two seconds of credit. A bad day gets weeks.</label>
         <label style="--hl:var(--butter-l)"><input type="checkbox">I keep waiting to feel ready. It never comes.</label>
-        <label style="--hl:var(--blush-l)"><input type="checkbox">I've said no to things I'd love because I didn't feel like me.</label>
       </div>
-      <p class="made" id="made" aria-live="polite">Me too. It doesn't mean you lack willpower. <span class="it">It means you've been doing it alone, on motivation alone.</span></p>
+      <p class="made" id="made" aria-live="polite">Me too. It's not a willpower problem. <span class="it">You've just been doing it alone.</span></p>
     </div>
   </div>
 </section>
@@ -967,11 +974,10 @@ section{padding:84px 0}
     <div>
       <div class="eyebrow rv">The part every other plan skips</div>
       <h2 class="rv d1">Consistency isn't a straight line. <span class="it">The coming back is the whole point.</span></h2>
-      <p class="lede rv d2">Most of us quit in week two. Not because we're lazy, but because life gets loud. With Rebloom you never start from zero.</p>
+      <p class="lede rv d2">Most of us quit in week two. Here, you never start from zero.</p>
       <div class="letter rv d3">
         <p><b>Day 9. If you've wobbled, hello.</b></p>
-        <p>Missed a few days? Welcome back. You haven't failed. You're still here.</p>
-        <p>Today, just do the 2-minute version of one petal. It counts the same as a perfect day.</p>
+        <p>Missed a few days? You haven't failed. Do the 2-minute version of one goal today. It counts.</p>
         <div class="from">Nes x</div>
       </div>
       <p class="twoline rv d4"><a href="#twomin">See the 2-minute versions →</a></p>
@@ -985,19 +991,11 @@ section{padding:84px 0}
     <div class="cgrid">
       <div>
         <div class="eyebrow rv">The Rebloom Club</div>
-        <h2 class="rv d1">A safe place to be <span class="it">exactly where you are.</span></h2>
-        <p class="lede rv d2">What one WhatsApp group did for my gym habit, the Club can do for the rest of your life. A small pod of women, a photo or voice note when you show up, and a live Sunday reset with me. Say what you're struggling with. No one here will judge you.</p>
-        <p class="lede rv d2" style="margin-top:-6px">Plus <b style="color:var(--ink)">one buddy</b> who sends a kind message if you go quiet for two days.</p>
+        <h2 class="rv d1">Goals stick <span class="it">when someone notices.</span></h2>
+        <p class="lede rv d2">What one WhatsApp group did for my gym habit, the Club does for your goals. A pod of six women, a photo or voice note when you show up, <b style="color:var(--ink)">a buddy</b> who checks in if you go quiet, and a live Sunday reset with me.</p>
         <div class="rules">
-          <div class="rv"><b>What's said here, stays here</b><span>No screenshots, ever. Share as much or as little as you like.</span></div>
-          <div class="rv d1"><b>Come as you are</b><span>Messy day, nothing done? Especially then.</span></div>
-          <div class="rv d2"><b>Listen first</b><span>"I hear you, me too" first. Advice only if you ask.</span></div>
-          <div class="rv d3"><b>No one's ahead</b><span>We cheer the 2-minute days as loudly as the big ones.</span></div>
-        </div>
-        <div class="cstats rv">
-          <div><b>4–6</b><span>women per pod</span></div>
-          <div><b>45 min</b><span>live every Sunday</span></div>
-          <div><b>20</b><span>founding spots, so pods stay small</span></div>
+          <div class="rv"><b>What's said here, stays here</b><span>No screenshots, ever.</span></div>
+          <div class="rv d1"><b>No one's ahead</b><span>We cheer the 2-minute days as loudly as the big ones.</span></div>
         </div>
         <p style="margin-top:36px" class="rv"><a class="btn light" href="#join">Reserve a founding place <span class="ar">→</span></a></p>
       </div>
@@ -1023,12 +1021,17 @@ section{padding:84px 0}
   <div class="wrap">
     <div class="center">
       <div class="eyebrow rv">Proof it works</div>
-      <h2 class="rv d1">It started in <span class="it">a group chat.</span></h2>
-      <p class="lede rv d2">Sweaty Faces was a WhatsApp group of friends and family. One rule: post a photo every time you work out.</p>
+      <h2 class="rv d1">It worked when <span class="it">someone checked in.</span></h2>
+      <p class="lede rv d2">My health and fitness took a back seat once I started working. When it's personal, nobody checks in on you. So I booked a weekly session with a personal trainer in Bridgend, and joined a group chat where we posted every workout.</p>
+    </div>
+    <div class="pstats rv">
+      <div><i class="pi" style="--pc:var(--lilac-l)" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></i><b>1 year</b><span>my most consistent stretch, ever</span></div>
+      <div><i class="pi" style="--pc:var(--apricot-l)" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.8 3.6-6 7-6s6.2 2.2 7 6"/></svg></i><b>1 trainer</b><span>every week, checking in on me</span></div>
+      <div><i class="pi" style="--pc:var(--mint-l)" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19l1.3-3.4A7.5 7.5 0 1 1 9.2 18.4z"/><path d="M9 11.5h.01M12 11.5h.01M15 11.5h.01" stroke-width="2.6"/></svg></i><b>1 group chat</b><span>a photo every workout</span></div>
     </div>
     <div class="quotes swipe">
-      <figure class="pq rv"><blockquote>"It's been one year since I joined Sweaty Faces, definitely the most consistent I've ever been."</blockquote><figcaption>Sweaty Faces member</figcaption></figure>
-      <figure class="pq rv d1"><blockquote>"It's really easy to lose track of doing the good things, so when I see that by the end of the month I'm hitting my workouts, it's been great to see, reflect on and be grateful for."</blockquote><figcaption>Sweaty Faces member</figcaption></figure>
+      <figure class="pq rv"><blockquote>"It's been one year since I joined [the group], definitely the most consistent I've ever been."</blockquote><figcaption>Group chat member</figcaption></figure>
+      <figure class="pq rv d1"><blockquote>"It's really easy to lose track of doing the good things, so when I see that by the end of the month I'm hitting my workouts, it's been great to see, reflect on and be grateful for."</blockquote><figcaption>Group chat member</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1064,7 +1067,7 @@ section{padding:84px 0}
         <div class="seats" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p class="seatcap">20 founding spots</p>
         <ul>
           <li>Everything in the Kit</li>
-          <li>A pod of 4 to 6, plus your buddy</li>
+          <li>A pod of six, plus your buddy</li>
           <li>Your progress link, tracked daily against your 30-day goals</li>
           <li>Live Sunday resets with me</li>
         </ul>
@@ -1085,22 +1088,23 @@ section{padding:84px 0}
     <div class="center">
       <div class="eyebrow rv">An honest question</div>
       <h2 class="rv d1">Why not just do this with your friends? <span class="it">Honestly, some of you can.</span></h2>
-      <p class="lede rv d2">If you've got that, hold onto it. Rebloom is for the rest of us. I built it for me first, because I realised I needed connection, a bit of girlhood, and the push that only comes from a group. I've been every one of these.</p>
+      <p class="lede rv d2">If you've got that, hold onto it. I built Rebloom for me first. I needed a bit of girlhood and the push that only comes from a group.</p>
     </div>
     <div class="whygrid swipe">
-      <article class="rv" style="--pc:var(--lilac-l)"><h3>Your people are far away</h3><p>Moving countries taught me this the hard way. Building friendships from scratch abroad is genuinely hard, and most of us don't talk about how lonely it gets.</p></article>
-      <article class="rv d1" style="--pc:var(--blush-l)"><h3>They're not on the same path</h3><p>They love you. They're also busy, or in a different season of life, and they don't quite get why the small stuff feels so big right now.</p></article>
-      <article class="rv d2" style="--pc:var(--butter-l)"><h3>They know the old you</h3><p>It's easier to say "I fell off again" to someone who's struggled with the same thing, and who has no history of watching you start over.</p></article>
-      <article class="rv d3" style="--pc:var(--mint-l)"><h3>Warmth, but no structure</h3><p>Sweaty Faces worked because it had a ritual: one photo, every time you showed up. Most friend chats are lovely, but nobody's checking in on Day 12.</p></article>
+      <article class="rv" style="--pc:var(--lilac-l)"><h3>Your people are far away</h3><p>Moving countries taught me this. Building friendships from scratch is hard.</p></article>
+      <article class="rv d1" style="--pc:var(--blush-l)"><h3>They're not on the same path</h3><p>They love you, but they're busy or in a different season.</p></article>
+      <article class="rv d2" style="--pc:var(--butter-l)"><h3>They know the old you</h3><p>It's easier to say "I fell off again" to someone who hasn't watched you start over.</p></article>
+      <article class="rv d3" style="--pc:var(--mint-l)"><h3>Warmth, but no structure</h3><p>Most friend chats are lovely, but nobody's checking in on Day 12.</p></article>
     </div>
     <div class="diff rv"><figure class="snap dsnap" style="--r:4deg"><img src="assets/nes-shore.jpg" alt="Nes walking barefoot along a sea wall at sunset, smiling" style="object-position:50% 45%" loading="lazy"><figcaption>small steps, one at a time</figcaption></figure>
       <h3>So Rebloom is built differently</h3>
       <ul>
-        <li><b>It's built for coming back.</b> One missed day doesn't undo anything. Giving up after it does. So here, a missed day is normal, not failure.</li>
-        <li><b>A buddy, not just a group chat.</b> Inside your pod you get one buddy who notices when you go quiet.</li>
-        <li><b>I'm in it, not above it.</b> I'm not an expert. I'm doing every season too.</li>
-        <li><b>No competition. Just you.</b> Nobody's racing anyone. The only person you're betting on here is yourself.</li>
-        <li><b>Never about your body.</b> Food and movement are about how you feel. That's it.</li>
+        <li style="--pc:var(--lilac-l)"><b>Built for coming back</b>One missed day doesn't reset you.</li>
+        <li style="--pc:var(--apricot-l)"><b>A pod of six</b>Matched to the goals you pick.</li>
+        <li style="--pc:var(--mint-l)"><b>A buddy</b>Who notices when you go quiet.</li>
+        <li style="--pc:var(--butter-l)"><b>Me, personally</b>Your call, your progress link, every Sunday live.</li>
+        <li style="--pc:var(--mist-l)"><b>No competition</b>The only person you're racing is you.</li>
+        <li style="--pc:var(--blush-l)"><b>Never about your body</b>No calories or weigh-ins.</li>
       </ul>
     </div>
   </div>
@@ -1110,7 +1114,59 @@ section{padding:84px 0}
 
 <main data-view="how-it-works" hidden>
 <div class="sprig top" aria-hidden="true"><svg class="grow" viewBox="0 0 360 80"></svg></div>
-<nav class="onpage" aria-label="On this page"><span>On this page</span><a href="#builds">What 30 days builds</a><a href="#how">The method</a><a href="#petals">The six petals</a><a href="#twomin">2-minute versions</a><a href="#season">Your 30 days</a><a href="#checkin">Daily check-in</a></nav>
+<nav class="onpage" aria-label="On this page"><span>On this page</span><a href="#season">Your 30 days</a><a href="#checkin">Daily check-in</a><a href="#builds">What 30 days builds</a><a href="#petals">The six petals</a><a href="#twomin">2-minute versions</a></nav>
+<!-- SEASON -->
+<section id="season">
+  <div class="wrap" style="position:relative"><figure class="snap abs right" style="--r:6deg;--w:160px;--r2:0px;--t:-10px"><img src="assets/nes-fog.jpg" alt="Nes in the fog on a beach, arm raised, smiling back" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>day 30 won't look perfect. that's ok</figcaption></figure>
+    <div class="center">
+      <div class="eyebrow rv">Your 30 days</div>
+      <h2 class="rv d1">Your 30 days, <span class="it">step by step.</span></h2>
+      <p class="lede rv d2">Habits take longer than 30 days to stick. So this is your first season, not the finish line.</p>
+    </div>
+    <div class="prestart">
+      <div class="pretag rv">Before Day 0</div>
+      <ol class="pre">
+        <li class="rv" style="--pc:var(--lilac-l)"><span class="pn">1</span><b>Fill in a short form</b><span>Your goals, and why now. One minute.</span></li>
+        <li class="rv d1" style="--pc:var(--apricot-l)"><span class="pn">2</span><b>A 15-minute call with me</b><span>So I know what you want from these 30 days.</span></li>
+        <li class="rv d2" style="--pc:var(--blush-l)"><span class="pn">3</span><b>Meet your flower</b><span>A group call with your pod. Six women, six petals, one flower. You bloom together.</span></li>
+      </ol>
+    </div>
+    <div class="season">
+      <svg class="vine" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M60 30 C 200 0, 300 60, 420 30 S 640 0, 760 30 S 1000 60, 1140 30" fill="none" stroke="#8FA876" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round"/></svg>
+      <div class="stages">
+        <div class="stg rv"><div class="bud"><svg width="30" height="30" viewBox="-20 -20 40 40"><circle r="5" fill="#8FA876"/></svg></div><div class="d">Day 0</div><b>Start</b><p>Pick 3 goals and your 2-minute versions</p></div>
+        <div class="stg rv d1"><div class="bud"><svg width="40" height="40" viewBox="-20 -20 40 40"><path d="M0 14 V-2" stroke="#8FA876" stroke-width="2.5"/><use href="#leaf" x="-12" y="-14" width="22" height="22" fill="#8FA876"/></svg></div><div class="d">Days 1–7</div><b>Plant</b><p>Start tiny. Check in daily</p></div>
+        <div class="stg mid rv d2"><div class="bud"><svg width="44" height="44" viewBox="-20 -20 40 40"><use href="#bud" x="-20" y="-20" width="40" height="40" fill="#B04A64"/></svg></div><div class="d">Days 8–14</div><b>Root</b><p>The messy middle. Your buddy checks in</p></div>
+        <div class="stg rv d3"><div class="bud"><svg width="46" height="46" viewBox="-20 -20 40 40"><use href="#tulip" x="-20" y="-20" width="40" height="40" fill="#CDBDE6"/></svg></div><div class="d">Days 15–21</div><b>Grow</b><p>Stretch one goal a little</p></div>
+        <div class="stg rv d4"><div class="bud"><svg width="50" height="50"><use href="#fl5" width="50" height="50" fill="#F6C29A"/></svg></div><div class="d">Days 22–29</div><b>Bloom</b><p>See your progress link fill up</p></div>
+        <div class="stg rv d4"><div class="bud" style="background:var(--butter-l)"><svg width="54" height="54"><use href="#fl6" width="54" height="54" fill="#F2BDB6" style="--fc:#F3B23C"/></svg></div><div class="d">Day 30</div><b>Rebloom</b><p>Review, then set next season</p></div>
+      </div>
+    </div>
+    <div class="rhythm rv">
+      <div><span class="n">2</span><span><b>min</b><small>morning intention</small></span></div>
+      <div><span class="n">3</span><span><b>min</b><small>evening reflection</small></span></div>
+      <div><span class="n">15</span><span><b>min</b><small>Sunday reset</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECK-IN SNEAK PEEK -->
+<section class="peek" id="checkin">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow rv">A sneak peek</div>
+      <h2 class="rv d1">Your daily check-in. <span class="it">No pressure, just honesty.</span></h2>
+      <p class="lede rv d2">The questions you'll answer with me. Two words is enough.</p>
+    </div>
+    <div class="peekgrid swipe">
+      <article class="rv" style="--pc:var(--butter-l)"><div class="ptime">Morning · 2 minutes</div><h3>Before the day gets loud</h3><ol><li>Which goal needs me most today?</li><li>If today gets busy, what's my 2-minute version?</li></ol></article>
+      <article class="rv d1" style="--pc:var(--lilac-l)"><div class="ptime">Evening · 3 minutes</div><h3>Closing the day kindly</h3><ol><li>What did I show up for today?</li><li>What got in the way?</li></ol></article>
+      <article class="rv d2" style="--pc:var(--blush-l)"><div class="ptime">Sunday reset · 15 minutes</div><h3>Looking back, gently</h3><ol><li>What went well this week, even slightly?</li><li>Where did I wobble, and what did it teach me?</li><li>What's one thing I'll make smaller next week?</li></ol></article>
+    </div>
+    <p class="peeknote rv">Missed one? Just answer today's. <span class="hand">Nes x</span></p>
+  </div>
+</section>
+
 <!-- PILLARS -->
 <section class="pillars" id="builds">
   <div class="wrap">
@@ -1121,58 +1177,19 @@ section{padding:84px 0}
     <div class="pil swipe">
       <article class="rv" style="--pc:var(--lilac);--pl:var(--lilac-l)">
         <h3>The voice in your head</h3>
-        <p class="raw">Mine used to be brutal. One missed gym day and it was "see, you always do this." I could hear it. I just never argued back.</p>
-        <p>Over the 30 days you'll start noticing the scripts that keep you stuck, catch them in the moment, and practise a fairer reply. Not toxic positivity. Just the truth, said kindly.</p>
+        <p class="raw">Mine used to be brutal. One missed gym day and it was "see, you always do this."</p>
         <div class="convo"><span class="old">"It's raining. I'll skip the gym today."</span><span class="new">"What's the 10-minute version I can do at home?"</span></div>
       </article>
       <article class="rv d1" style="--pc:var(--blush);--pl:var(--blush-l)">
         <h3>People on the same path</h3>
-        <p class="raw">I've only ever been consistent when someone was watching. Not because of pressure, but because someone noticed. Sweaty Faces taught me that.</p>
-        <p>In the Club, your pod is 4 to 6 women on the same 30 days. You share a photo or a voice note when you show up, and someone notices when you go quiet. Nobody's ahead. Nobody's judging. Going solo with the Kit? Rope in one friend. One person noticing is enough.</p>
+        <p class="raw">I've only ever been consistent when someone noticed.</p>
         <div class="convo"><span class="new">"Rough day. Did my 2 minutes."</span><span class="new" style="background:var(--mint-l)">"That counts. Proud of you 🌻"</span></div>
       </article>
       <article class="rv d2" style="--pc:var(--butter);--pl:var(--butter-l)">
         <h3>One day at a time</h3>
         <p class="raw">I spent years living in "next month." Next month I'll start properly. Next month I'll have more time. It never came.</p>
-        <p>Rebloom shrinks it down to today: three small things, a 2-minute version for the hard days, and no streaks to break. Miss a day and you don't start over. You just come back.</p>
         <div class="convo"><span class="new">"I woke up. I'm here today. That's another chance to rebloom."</span></div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- HOW -->
-<section id="how">
-  <div class="wrap">
-    <div class="how-grid">
-      <div>
-        <div class="eyebrow rv">How it works</div>
-        <h2 class="rv d1">No blank page. <span class="it">Just three questions.</span></h2>
-        <p class="lede rv d2">Ever notice how one thought turns into ten? "I haven't been eating well" becomes "and I haven't been to the gym, and I still haven't finished that book." Round and round, and nowhere.</p>
-        <p class="lede rv d2">So the first step is getting it all out of your head. Pick your three petals and answer three gentle questions for each, in a journal, your notes app or a voice memo. Ten minutes. Messy is fine.</p>
-        <ol class="steps">
-          <li class="rv"><span class="dot" style="background:var(--lilac)">1</span><div><h3>Answer</h3><p>Ten minutes with the questions, written or spoken.</p></div></li>
-          <li class="rv d1"><span class="dot" style="background:var(--apricot)">2</span><div><h3>Intend</h3><p>Three clear intentions, in your own words.</p></div></li>
-          <li class="rv d2"><span class="dot" style="background:var(--butter)">3</span><div><h3>See</h3><p>A board on your lock screen that reminds you why.</p></div></li>
-          <li class="rv d3"><span class="dot" style="background:var(--mint)">4</span><div><h3>Live</h3><p>Five minutes a day, with 2-minute versions for busy days.</p></div></li>
-          <li class="rv d4"><span class="dot" style="background:var(--blush)">5</span><div><h3>Reflect</h3><p>Notice what's changed, then rebloom next season.</p></div></li>
-        </ol>
-      </div>
-      <div class="rv d2" style="justify-self:center">
-        <div class="phone"><div class="isl"></div><div class="scr">
-          <div class="sb"><span>7:42</span><span>●●● ◔</span></div>
-          <div class="chat" id="chat">
-            <div class="ttl">My journal · Move</div>
-            <div class="bub">How does my body feel moving through a normal week?</div>
-            <div class="bub me">Stiff. I sit all day and skip my walks.</div>
-            <div class="bub">What kind of movement do I actually enjoy?</div>
-            <div class="bub me">Dancing in the kitchen. Long walks with a friend.</div>
-            <div class="bub">What stops me, and what's the smallest version?</div>
-            <div class="bub me">Rain and tiredness. One song, one dance.</div>
-            <div class="jfoot">✿ 10 minutes · messy is fine</div>
-          </div>
-        </div></div>
-      </div>
     </div>
   </div>
 </section>
@@ -1189,9 +1206,8 @@ section{padding:84px 0}
       <svg class="flower rv" viewBox="-250 -250 500 500" role="group" aria-label="Choose a petal" id="flower"></svg>
       <div class="pcard rv d2" aria-live="polite">
         <div class="swatch" id="psw"></div>
-        <div class="fade" id="pc"><h3>Mind</h3><p class="sub">Mental health and calm</p><dl><div><dt>Three questions to start</dt><ol><li>On an average day, how does your head feel: calm, busy, foggy or low?</li><li>How would you like to feel most days?</li><li>When does your mind feel loudest, and what usually sets it off?</li></ol></div><div><dt>An example intention</dt><dd>I start each day feeling calm and in control.</dd></div><div><dt>The 2-minute habit</dt><dd>A 2-minute voice brain-dump before bed</dd></div></dl></div>
-        <p class="note">No names, no health details, no money. Just how things feel, and where you'd like them to go.</p>
-        <p class="note">Food and movement are always about how you feel. Never calories, weight or body shape.</p>
+        <div class="fade" id="pc"><h3>Mind</h3><p class="sub">Mental health and calm</p><dl><div><dt>Three questions to start</dt><ol><li>On an average day, how does your head feel: calm, busy, foggy or low?</li><li>How would you like to feel most days?</li><li>When does your mind feel loudest, and what usually sets it off?</li></ol></div><div><dt>An example intention</dt><dd>I start each day feeling calm and in control.</dd></div><div><dt>The 2-minute habit</dt><dd>A 2-minute voice brain-dump before bed</dd></div><div><dt>What you track</dt><dd>Mood, 1 to 5</dd></div></dl></div>
+        <p class="note">No names, health details or money. Food and movement are never about weight.</p>
       </div>
     </div>
   </div>
@@ -1212,45 +1228,6 @@ section{padding:84px 0}
         </ul>
         <p>Small enough to do on your worst day. That's the whole point.</p>
       </div>
-  </div>
-</section>
-
-<!-- SEASON -->
-<section style="padding-top:40px" id="season">
-  <div class="wrap">
-    <div class="center">
-      <div class="eyebrow rv">Your 30 days</div>
-      <h2 class="rv d1">A season, <span class="it">not a sprint.</span></h2>
-      <p class="lede rv d2">Honestly? Habits take most people longer than 30 days to feel automatic. So 30 days isn't the finish line. It's your first season, and you come back for the next one.</p>
-    </div>
-    <div class="season"><figure class="snap abs right" style="--r:6deg;--w:160px;--r2:0px;--t:-210px"><img src="assets/nes-fog.jpg" alt="Nes in the fog on a beach, arm raised, smiling back" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>day 30 won't look perfect. that's ok</figcaption></figure>
-      <svg class="vine" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M60 30 C 200 0, 300 60, 420 30 S 640 0, 760 30 S 1000 60, 1140 30" fill="none" stroke="#8FA876" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round"/></svg>
-      <div class="stages">
-        <div class="stg rv"><div class="bud"><svg width="30" height="30" viewBox="-20 -20 40 40"><circle r="5" fill="#8FA876"/></svg></div><div class="d">Day 0</div><b>Start</b><p>20 minutes, tonight</p></div>
-        <div class="stg rv d1"><div class="bud"><svg width="40" height="40" viewBox="-20 -20 40 40"><path d="M0 14 V-2" stroke="#8FA876" stroke-width="2.5"/><use href="#leaf" x="-12" y="-14" width="22" height="22" fill="#8FA876"/></svg></div><div class="d">Days 1–7</div><b>Plant</b><p>Start tiny</p></div>
-        <div class="stg mid rv d2"><div class="bud"><svg width="44" height="44" viewBox="-20 -20 40 40"><use href="#bud" x="-20" y="-20" width="40" height="40" fill="#B04A64"/></svg></div><div class="d">Days 8–14</div><b>Root</b><p>The messy middle. Built for it.</p></div>
-        <div class="stg rv d3"><div class="bud"><svg width="46" height="46" viewBox="-20 -20 40 40"><use href="#tulip" x="-20" y="-20" width="40" height="40" fill="#CDBDE6"/></svg></div><div class="d">Days 15–21</div><b>Grow</b><p>Stretch one habit</p></div>
-        <div class="stg rv d4"><div class="bud"><svg width="50" height="50"><use href="#fl5" width="50" height="50" fill="#F6C29A"/></svg></div><div class="d">Days 22–29</div><b>Bloom</b><p>Notice the change</p></div>
-        <div class="stg rv d4"><div class="bud" style="background:var(--butter-l)"><svg width="54" height="54"><use href="#fl6" width="54" height="54" fill="#F2BDB6" style="--fc:#F3B23C"/></svg></div><div class="d">Day 30</div><b>Rebloom</b><p>Begin again, wiser</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CHECK-IN SNEAK PEEK -->
-<section class="peek" id="checkin">
-  <div class="wrap">
-    <div class="center">
-      <div class="eyebrow rv">A sneak peek</div>
-      <h2 class="rv d1">Your daily check-in. <span class="it">No pressure, just honesty.</span></h2>
-      <p class="lede rv d2">These are the kind of questions you'll answer with me. Grab a notebook, your notes app or a voice memo. Two words is enough. Messy is the point.</p>
-    </div>
-    <div class="peekgrid swipe">
-      <article class="rv" style="--pc:var(--butter-l)"><div class="ptime">Morning · 2 minutes</div><h3>Before the day gets loud</h3><ol><li>How am I arriving today, in one word?</li><li>Which of my three petals needs me most today?</li><li>If today gets busy, what's my 2-minute version?</li></ol></article>
-      <article class="rv d1" style="--pc:var(--lilac-l)"><div class="ptime">Evening · 3 minutes</div><h3>Closing the day kindly</h3><ol><li>What did I show up for today, even a little?</li><li>What got in the way, and was it really about me?</li><li>One kind thing I'll say to myself before bed.</li></ol></article>
-      <article class="rv d2" style="--pc:var(--blush-l)"><div class="ptime">Sunday reset · 15 minutes</div><h3>Looking back, gently</h3><ol><li>What went well this week, even slightly?</li><li>Where did I wobble, and what did it teach me?</li><li>What's one thing I'll make smaller next week?</li></ol></article>
-    </div>
-    <p class="peeknote rv">Missed a check-in? Skip it. Just answer today's. <span class="hand">Nes x</span></p>
   </div>
 </section>
 
@@ -1280,18 +1257,15 @@ section{padding:84px 0}
       <h2 class="rv d1">I'm not a guru. <span class="it">I'm in the middle of it too.</span></h2>
       <div class="story rv d2">
         <p>Can I be honest with you?</p>
-        <p>I grew up with big self-esteem issues, and I was a massive procrastinator. A lot of that goes back to my childhood and the environment I grew up in. I'd be on track for three months, then fall off, then spend weeks beating myself up. Maybe you know that loop too.</p>
-        <p>Then work happened. I built a career in corporate, and everything else quietly took a back seat. Somewhere along the way I stopped feeling comfortable in my own skin, and in my own life. I wasn't really living it. I was procrastinating through it. So much of my life happened in my head, not out in the world.</p>
+        <p>I grew up with big self-esteem issues and I was a massive procrastinator. I'd be on track for three months, fall off, then spend weeks beating myself up. Maybe you know that loop too.</p>
+        <p>Then I built a career in corporate and everything else took a back seat. So much of my life happened in my head, not out in the world.</p>
         <div class="mfan" aria-hidden="true"><figure class="snap" style="--r:-7deg;--w:34%"><img src="assets/nes-sunset.jpg" alt="" style="object-position:50% 70%" loading="lazy"></figure><figure class="snap" style="--r:-3deg;--w:34%"><img src="assets/nes-hammock.jpg" alt="" loading="lazy"></figure><figure class="snap" style="--r:6deg;--w:34%;--y:-6px"><img src="assets/nes-sunhat.jpg" alt="" style="object-position:50% 40%" loading="lazy"></figure></div>
-        <p>Here's what I didn't see for years. Every time I didn't stick with something, my brain kept the receipt. So when I started again, it already "knew" how it would end. I carried invisible scripts about who I was, what I could do and what I couldn't. Some days I was even scared of it going <em>well</em>. I could hear that voice. I just never got round to arguing back.</p>
-        <p>It took me a long time to learn those scripts weren't true. They were just old. <span class="it">Nothing's too late. You can come back.</span></p>
-        <p>I haven't done any of this alone. My husband, Jordan, has been my rock through all of it, the wobbles and the fresh starts included. He's the reason I know how much it changes things to have someone in your corner. I want you to have that too.</p>
-        <p>So I built Rebloom for you, and for me. Accountability and support that doesn't cost the earth. A safe space where no one judges where you're starting from. And me, right there with you, sharing what's actually working as I go.</p>
-        <p>I'm an August Leo. Sunflowers, sunny energy, that's always felt like me. There's been a little flower next to my name on WhatsApp for as long as I can remember, and "blooming" has always been in my bio. That's my state of mind. I'm blooming wherever I am, and whoever I'm with.</p>
+        <p>Every time I didn't stick with something, my brain kept the receipt. So when I started again, it already "knew" how it would end. It took me years to see those scripts weren't true. <span class="it">They were just old.</span></p>
+        <p>My husband, Jordan, has been my rock through all of it. He's why I know what it means to have someone in your corner. I want you to have that too.</p>
+        <p>So I built Rebloom for you, and for me. Accountability that doesn't cost the earth, and me right there with you, sharing what's working as I go.</p>
+        <p>I'm an August Leo. Sunflowers, sunny energy, and "blooming" in my bio for as long as I can remember.</p>
         <div class="mfan" aria-hidden="true"><figure class="snap" style="--r:4deg;--w:52%"><img src="assets/nes-paris.jpg" alt="" style="object-position:30% 40%" loading="lazy"></figure></div>
-        <p>But over the past couple of years, I haven't always felt like that. Some days the word sat there in my bio and I felt like I was faking it. Like I was holding up a version of me I couldn't quite reach anymore.</p>
-        <p>What I've realised is that nobody stays in bloom forever. Not flowers, not people. There will be ups and downs, good seasons and quiet ones. That doesn't make the blooming fake. It just means you have to come back to it.</p>
-        <p>That's where the name comes from. Not blooming. <em>Re</em>blooming. Choosing it again, every day, especially on the days you don't feel it.</p>
+        <p>Lately, some days it felt like faking it. But nobody stays in bloom forever. That's where the name comes from. Not blooming. <em>Re</em>blooming. Choosing it again, especially on the days you don't feel it.</p>
         <p>Every morning you wake up, you get another go. So do I.</p>
       </div>
       <div class="rv d4" style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#say-hello">Say hello <span class="ar">→</span></a><a class="btn ghost" href="https://www.instagram.com/makingsensewithnes/" target="_blank" rel="noopener">@makingsensewithnes</a></div>
@@ -1305,7 +1279,7 @@ section{padding:84px 0}
     <div>
       <div class="eyebrow rv">Where this started</div>
       <blockquote class="bigq rv d1"><span class="mk" aria-hidden="true">“</span>Turns out I was relying on motivation, and <mark>motivation comes and goes.</mark></blockquote>
-      <p class="lede rv d2" style="margin-top:28px">Then a few friends and cousins started a WhatsApp group called <b style="color:var(--ink);font-weight:600">Sweaty Faces</b>. For the first time in my life, I didn't fall off. Not because I found willpower, but because I wasn't doing it alone. I want you to feel that about the rest of your life too.</p>
+      <p class="lede rv d2" style="margin-top:28px">Then I started training with a personal trainer in Bridgend every week, and a few friends and cousins started a WhatsApp group where we posted every workout. For the first time in my life, I didn't fall off. Not because I found willpower, but because I wasn't doing it alone. I want you to feel that about the rest of your life too.</p>
     </div>
     <figure class="snap rv d2" style="--r:5deg;--w:220px;justify-self:center"><img src="assets/nes-arch.webp" alt="Nes in a patterned dress and pink scarf, looking up in a stone archway" style="object-position:50% 62%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>the me who finally stopped starting over</figcaption></figure>
   </div>
@@ -1317,13 +1291,13 @@ section{padding:84px 0}
       <div>
         <div class="eyebrow rv">When you need more than the Club</div>
         <h2 class="rv d1">Therapy helped me. <span class="it">At £65 a session, I couldn't afford it.</span></h2>
-        <p class="lede rv d2">Moving countries and starting from scratch is isolating. Some days you feel low and can't say why. Here's how I found support without paying for it.</p>
+        <p class="lede rv d2">Here's how I found support without paying for it.</p>
         <blockquote class="thq rv d3">"Therapy isn't someone handing you a solution. It's someone helping you see your own thinking, and challenge it. A lot of what I believed about myself had no actual proof."</blockquote><figure class="snap inline" style="--r:-3deg;--w:220px"><img src="assets/nes-woods.jpg" alt="Nes on a woodland path, arms wide open, face to the sky" style="object-position:50% 45%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>moving countries meant starting over</figcaption></figure>
       </div>
       <ol class="route">
-        <li class="rv"><span class="rn">1</span><div><b>Ask your work</b><p>Many employers offer a few free counselling sessions through occupational health or an employee assistance line. I got about six this way.</p></div></li>
-        <li class="rv d1"><span class="rn">2</span><div><b>Join a waitlist with Mind</b><p>The mental health charity. The wait was long, but I got free weekly sessions for three months. <a href="https://www.mind.org.uk" target="_blank" rel="noopener">mind.org.uk</a></p></div></li>
-        <li class="rv d2"><span class="rn">3</span><div><b>Check what the NHS offers near you</b><p>Talking therapies can often be accessed for free. Your GP is a good place to start. <a href="https://www.nhs.uk/mental-health/" target="_blank" rel="noopener">nhs.uk/mental-health</a></p></div></li>
+        <li class="rv"><span class="rn">1</span><div><b>Ask your work</b><p>Many employers offer free counselling sessions. I got about six this way.</p></div></li>
+        <li class="rv d1"><span class="rn">2</span><div><b>Join a waitlist with Mind</b><p>A long wait, then free weekly sessions for three months. <a href="https://www.mind.org.uk" target="_blank" rel="noopener">mind.org.uk</a></p></div></li>
+        <li class="rv d2"><span class="rn">3</span><div><b>Check what the NHS offers near you</b><p>Talking therapies are often free. Start with your GP. <a href="https://www.nhs.uk/mental-health/" target="_blank" rel="noopener">nhs.uk/mental-health</a></p></div></li>
       </ol>
     </div>
     <p class="fine rv" style="text-align:center;margin-top:36px">Rebloom isn't therapy and doesn't replace it. If you're struggling right now, Samaritans are free, any time, on 116 123.</p>
@@ -1343,14 +1317,14 @@ section{padding:84px 0}
       <div>
         <div class="eyebrow rv">Say hello</div>
         <h2 class="rv d1">However you're feeling, <span class="it">you can tell me.</span></h2>
-        <p class="lede rv d2">Not sure if Rebloom is for you? Want to share where you're at? I read every message myself. No sales pitch.</p>
+        <p class="lede rv d2">Not sure if Rebloom is for you? I read every message myself.</p>
         <div class="ways">
           <a class="rv" href="https://www.instagram.com/makingsensewithnes/" target="_blank" rel="noopener"><span class="ic" style="background:var(--blush)">✉</span><span><b>Send me a DM</b><span>@makingsensewithnes on Instagram</span></span></a>
           <div class="wsoon rv d1"><span class="ic" style="background:var(--lilac)" aria-hidden="true">🎙</span><span><b>Send a voice note</b><span>WhatsApp voice notes, coming soon</span></span></div>
         </div>
-        <div class="care rv d2"><span>I'm a friend on this journey, not a therapist. If you're struggling right now, please talk to someone you trust or your GP. Samaritans are free, any time, on <b>116 123</b> (UK). In an emergency, call 999.</span></div>
+        <div class="care rv d2"><span>I'm not a therapist. If you're struggling, Samaritans are free any time on <b>116 123</b> (UK). In an emergency, call 999.</span></div>
       </div>
-      <form class="tform rv d1" data-thanks="t2">
+      <form class="tform rv d1" data-thanks="t2"><input name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <label for="nm">What should I call you? <span>(optional)</span></label>
         <input id="nm" placeholder="A first name or nickname is fine">
         <label for="em">Your email, so I can reply</label>
@@ -1380,12 +1354,12 @@ section{padding:84px 0}
       <p class="lede rv d2">Anything else? <a href="#say-hello">Ask me directly.</a></p>
     </div>
     <div class="rv d1">
-      <details><summary>I'm not a writer.</summary><p>You don't need to be. Messy notes count, bullet points count, and voice notes to yourself count too. Nobody reads your answers but you.</p></details>
-      <details><summary>What about my privacy?</summary><p>The questions never ask for names, health details or money. You write about routines and how things feel, not people.</p></details>
-      <details><summary>I've fallen off more times than I can count.</summary><p>Me too. Rebloom isn't built for people who never fall off. It's built for coming back: a smaller version for hard days, people who notice when you go quiet, and a fresh start every morning.</p></details>
-      <details><summary>Is this therapy?</summary><p>No. Rebloom is for reflection, small habits and doing it together. It isn't therapy or medical advice. Therapy helped me a lot, and I've shared how I found it for free in the UK on <a href="#my-story">my story page</a>.</p></details>
-      <details><summary>What if I miss a week?</summary><p>You rejoin. Go to today's page, do the 2-minute version of one petal, read your letter. Your 30 days can take 40.</p></details>
-      <details><summary>Is it about weight or dieting?</summary><p>Never. Food and movement are about how you feel. No calories, weigh-ins or body goals.</p></details>
+      <details><summary>Do I need ChatGPT or Claude?</summary><p>No. A notebook or voice memo works just as well. AI is an optional shortcut.</p></details>
+      <details><summary>What about my privacy?</summary><p>The questions never ask for names, health details or money. Nobody reads your answers but you.</p></details>
+      <details><summary>I've fallen off more times than I can count.</summary><p>Me too. Rebloom is built for coming back, not for people who never fall off.</p></details>
+      <details><summary>Is this therapy?</summary><p>No. It's for goals and habits, done together. Therapy helped me, and I share how I found it for free on <a href="#my-story">my story page</a>.</p></details>
+      <details><summary>What if I miss a week?</summary><p>You rejoin with today's 2-minute version. Your 30 days can take 40.</p></details>
+      <details><summary>Is it about weight or dieting?</summary><p>Never. No calories, weigh-ins or body goals.</p></details>
     </div>
   </div>
 </section>
@@ -1421,7 +1395,7 @@ section{padding:84px 0}
   <div class="wrap">
     <a class="logo" href="#">rebloom</a>
     <nav><a href="#how-it-works">How it works</a><a href="#circle">Rebloom Club</a><a href="#my-story">My story</a><a href="#say-hello">Say hello</a><a href="https://www.instagram.com/makingsensewithnes/" target="_blank" rel="noopener">Instagram</a></nav>
-    <div class="legal"><span>Not therapy or medical advice · Samaritans 116 123 (UK, free, 24/7)</span><span><a href="#">Terms</a> · <a href="#">Privacy</a> · © 2026 Rebloom · rebloomwithnes.co.uk · Prototype: forms don't send yet</span></div>
+    <div class="legal"><span>Not therapy or medical advice · Samaritans 116 123 (UK, free, 24/7)</span><span><a href="#">Terms</a> · <a href="#">Privacy</a> · © 2026 Rebloom · rebloomwithnes.co.uk</span></div>
   </div>
 </footer>
 
@@ -1430,6 +1404,7 @@ section{padding:84px 0}
 <div class="wl" id="wl" hidden>
   <div class="wl-card" role="dialog" aria-modal="true" aria-labelledby="wl-t">
     <button type="button" class="wl-x" data-close aria-label="Close">×</button>
+
     <div class="wl-body">
       <div class="wl-step" data-step="1">
         <span class="wl-tag">20 founding spots · First month free</span>
@@ -1445,7 +1420,7 @@ section{padding:84px 0}
         <span class="wl-tag">Your spot is saved · one last step</span>
         <h2 tabindex="-1">Tell me a little about you</h2>
         <p>One minute. I read every one, then we'll have a 15-minute call.</p>
-        <form class="intake" id="intake">
+        <form class="intake" id="intake"><input name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
           <label class="q" for="in-name">What should I call you?</label>
           <input id="in-name" name="name" required placeholder="First name is fine" autocomplete="given-name">
 
@@ -1532,15 +1507,28 @@ addEventListener('scroll',()=>{const y=scrollY;nav.classList.toggle('scrolled',y
 // claim your spot: email, then a short intake form, then thanks
 const wlSteps=[...wl.querySelectorAll('.wl-step')];
 function goStep(n){wlSteps.forEach(x=>x.hidden=x.dataset.step!==String(n));const card=wl.querySelector('.wl-card');if(card)card.scrollTop=0;setTimeout(()=>{const h=wl.querySelector(`.wl-step[data-step="${n}"] h2`);if(h)h.focus()},80)}
-document.querySelectorAll('form.signup').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const em=f.querySelector('input[type=email]'),pop=document.getElementById('wl-email');if(em&&pop&&em!==pop)pop.value=em.value;openWl();goStep(2)}));
+function postForm(url,data){return fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(r=>r.json().catch(()=>({ok:false}))).catch(()=>({ok:false}))}
+document.querySelectorAll('form.signup').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const em=f.querySelector('input[type=email]'),pop=document.getElementById('wl-email');if(em&&pop&&em!==pop)pop.value=em.value;if(em&&em.value)postForm('/api/signup',{stage:'email',email:em.value});openWl();goStep(2)}));
 const petalBox=document.getElementById('in-petals'),hint=document.getElementById('in-hint');
 if(petalBox)petalBox.addEventListener('change',e=>{const on=petalBox.querySelectorAll('input:checked');if(on.length>3){e.target.checked=false;hint.textContent='Three is plenty to start with. You can swap next season.'}else hint.textContent=''});
 const intake=document.getElementById('intake');
-if(intake)intake.addEventListener('submit',e=>{e.preventDefault();goStep(3)});
+if(intake)intake.addEventListener('submit',async e=>{e.preventDefault();const btn=intake.querySelector('button[type=submit]'),v=n=>{const x=intake.querySelector(`[name="${n}"]:checked`);return x?x.value:''};
+ const data={stage:'full',email:document.getElementById('wl-email').value,name:document.getElementById('in-name').value,city:v('city'),petals:[...intake.querySelectorAll('[name="petal"]:checked')].map(x=>x.value),now:document.getElementById('in-now').value,how:v('how'),phone:document.getElementById('in-phone').value,consent:document.getElementById('in-ok').checked,company:(intake.querySelector('[name="company"]')||{}).value||''};
+ if(!data.email){goStep(1);return}
+ btn.disabled=true;hint.textContent='Sending…';const r=await postForm('/api/signup',data);btn.disabled=false;
+ if(r.ok){hint.textContent='';goStep(3)}else hint.textContent="Sorry, that didn't send. Please try again, or DM me on Instagram @makingsensewithnes."});
 
-// forms (prototype: nothing leaves the page)
-document.querySelectorAll('form[data-thanks]').forEach(f=>f.addEventListener('submit',e=>{
-  e.preventDefault();document.getElementById(f.dataset.thanks).classList.add('show');f.querySelectorAll('input:not([type=radio]),textarea').forEach(i=>i.value='');
+// say hello form
+const tform=document.querySelector('form.tform');
+if(tform)tform.addEventListener('submit',async e=>{e.preventDefault();const btn=tform.querySelector('button[type=submit]'),t=tform.querySelector('[name="tp"]:checked'),thanks=document.getElementById(tform.dataset.thanks);
+ const data={name:document.getElementById('nm').value,email:document.getElementById('em').value,topic:t?tform.querySelector(`label[for="${t.id}"]`).textContent:'',message:document.getElementById('msg').value,company:(tform.querySelector('[name="company"]')||{}).value||''};
+ btn.disabled=true;const r=await postForm('/api/contact',data);btn.disabled=false;
+ if(r.ok){thanks.textContent='Thank you for trusting me with this. I\'ll reply within a few days. ';thanks.insertAdjacentHTML('beforeend','<span class="hand">Nes x</span>');thanks.classList.add('show');tform.querySelectorAll('input:not([type=radio]),textarea').forEach(i=>i.value='')}
+ else{thanks.textContent="Sorry, that didn't send. Please try again, or DM me on Instagram @makingsensewithnes.";thanks.classList.add('show')}});
+
+// end-of-page sign-up: the pop-up takes over from here
+document.querySelectorAll('form.signup[data-thanks]').forEach(f=>f.addEventListener('submit',e=>{
+  e.preventDefault();document.getElementById(f.dataset.thanks).classList.add('show');f.querySelectorAll('input').forEach(i=>i.value='');
 }));
 
 // ticks
@@ -1580,7 +1568,7 @@ function show(k){const p=P[k];
  fl.querySelectorAll('.pt').forEach(g=>{const on=+g.dataset.k===k;g.classList.toggle('on',on);g.setAttribute('aria-pressed',on);g.style.transform=on?`translate(${Math.sin(k*Math.PI/3)*12}px,${-Math.cos(k*Math.PI/3)*12}px)`:''});
  const sel=fl.querySelector(`.pt[data-k="${k}"]`),ctr=fl.querySelector('circle'),hadFocus=document.activeElement===sel;fl.insertBefore(sel,ctr);if(hadFocus)sel.focus();
  psw.style.background=p.c;pc.style.opacity=0;
- setTimeout(()=>{pc.innerHTML=`<h3>${p.n}</h3><p class="sub">${p.s}</p><dl><div><dt>Three questions to start</dt><ol>${p.q.map(x=>`<li>${x}</li>`).join('')}</ol></div><div><dt>An example intention</dt><dd>${p.i}</dd></div><div><dt>The 2-minute habit</dt><dd>${p.h}</dd></div></dl>`;pc.style.opacity=1},180)}
+ setTimeout(()=>{pc.innerHTML=`<h3>${p.n}</h3><p class="sub">${p.s}</p><dl><div><dt>Three questions to start</dt><ol>${p.q.map(x=>`<li>${x}</li>`).join('')}</ol></div><div><dt>An example intention</dt><dd>${p.i}</dd></div><div><dt>The 2-minute habit</dt><dd>${p.h}</dd></div><div><dt>What you track</dt><dd>${p.t}</dd></div></dl>`;pc.style.opacity=1},180)}
 fl.addEventListener('click',e=>{const g=e.target.closest('.pt');if(g)show(+g.dataset.k)});
 fl.addEventListener('keydown',e=>{const g=e.target.closest('.pt');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();show(+g.dataset.k)}});
 show(0);}
