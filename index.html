@@ -278,14 +278,13 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .ighead h2{margin:0}
 /* ticks */
 .tickwrap{background:#fff;border-radius:var(--r-lg);padding:clamp(28px,5vw,64px);box-shadow:var(--shadow);position:relative;overflow:hidden}
-#check details.tickdrop{border:1.5px solid var(--berry);border-radius:var(--r-md);margin-top:28px;max-width:760px;background:#fff;overflow:hidden}
-.tickdrop summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;font-family:inherit;font-size:17px;font-weight:600;color:var(--ink);cursor:pointer;transition:background .25s}
-.tickdrop summary::-webkit-details-marker{display:none}
-.tickdrop summary::after{display:none}
-.tickdrop summary:hover{background:var(--bg)}
-.tickdrop .chev{flex:none;width:10px;height:10px;border:solid var(--berry);border-width:0 2px 2px 0;transform:rotate(45deg) translate(-2px,-2px);transition:transform .25s}
-.tickdrop[open] .chev{transform:rotate(-135deg) translate(-2px,-2px)}
-#check .tickdrop .ticks{grid-template-columns:1fr;gap:8px;margin:0;padding:4px 12px 12px}
+#check .drops{grid-template-columns:1fr;max-width:820px;gap:10px;margin-top:24px}
+.drops .tx{flex:1;min-width:0}
+.drops .chev{flex:none;width:10px;height:10px;border:solid var(--berry);border-width:0 2px 2px 0;transform:rotate(45deg);margin:5px 6px 0 4px;transition:transform .3s,margin .3s}
+.drops label:has(input:checked) .chev{transform:rotate(-135deg);margin-top:11px}
+.drops .rep{display:block;max-height:0;overflow:hidden;opacity:0;font-family:var(--serif);font-size:17px;line-height:1.5;color:var(--ink-2);transition:max-height .45s ease,opacity .35s,margin .35s}
+.drops label:has(input:checked) .rep{max-height:420px;opacity:1;margin-top:12px}
+.drops .rep .hand{white-space:nowrap}
 .ticks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
 @media (max-width:900px){.ticks{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.ticks{grid-template-columns:1fr}}
@@ -1063,41 +1062,12 @@ section{padding:84px 0}
     <div class="tickwrap rv"><figure class="snap abs right" style="--r:5deg;--w:160px;--r2:28px;--t:22px"><img src="assets/nes-yellow.webp" alt="Nes in a beanie and puffer coat, smiling over her shoulder by a yellow wall" style="object-position:50% 30%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>a cold day I showed up anyway</figcaption></figure>
       <div class="eyebrow">Who it's for</div>
       <h2>This is for you if…</h2>
-      <details class="tickdrop">
-      <summary><span>Tap any that sound like you</span> <span class="chev" aria-hidden="true"></span></summary>
-      <div class="ticks" id="ticks">
-        <label style="--hl:var(--apricot-l)"><input type="checkbox">I'm great until life gets busy. One holiday and I'm off track.</label>
-        <label style="--hl:var(--mint-l)"><input type="checkbox">I show up for everyone else. Me comes last.</label>
-        <label style="--hl:var(--butter-l)"><input type="checkbox">I keep putting things off until I feel ready.</label>
-        <label style="--hl:var(--lilac-l)"><input type="checkbox">I've started and stopped so many times, I now struggle to believe I can do it.</label>
-      </div>
-      </details>
-      <p class="made" id="made" aria-live="polite">Me too. It's not a willpower problem. <span class="it">You've just been doing it alone.</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- COMING BACK -->
-<section class="back">
-  <div class="wrap">
-    <a class="rc rv" style="--c:#fff" href="https://www.instagram.com/reel/Ddox5yrI0xT/" target="_blank" rel="noopener"><span class="still"><img src="assets/ig-1.jpg" alt="Still from this reel" loading="lazy"><span class="pl" aria-hidden="true">▶</span></span><div class="q">So I'm back. Not because I feel ready. Just because I decide to show up.</div><div class="foot"><span>Watch on Instagram →</span></div></a>
-    <div>
-      <div class="eyebrow rv">Why I made this</div>
-      <h2 class="rv d1">I only ever kept going <span class="it">when someone noticed.</span></h2>
-      <p class="lede rv d2">For years I'd start strong, fall off, then spend weeks beating myself up. Every time I got on a streak, life happened: a holiday, people coming over, something big. I'd go off track, and coming back felt so hard. Those are the times I wished I had a group keeping me going.</p>
-      <div class="letter rv d3">
-        <p><b>So here's what changed.</b></p>
-        <p>Therapy last year helped me see it. I grew up with a lot of self-limiting beliefs, and I had so much proof of not following through that I'd decided consistency just wasn't for me. But the biggest thing therapy gave me was realising I wasn't alone in it. Just saying it out loud to someone made it lighter. That feeling is the root of Rebloom.</p>
-        <p>Then a few friends and I started helping each other get to the gym, posting a photo every time we went. Looking back on the past year, it's the most I've ever been. I've always done better when I'm part of something.</p>
-        <p>That gave me the courage to do something scary: share my thoughts out loud on Instagram. Since turning 30, I'm finally showing up for myself, and it feels so freeing.</p>
-        <p>It wasn't willpower. Old habits are hard to break. I just wasn't doing it alone, and someone noticed. My friends and I talk about this struggle all the time, and I don't think we're the only ones. As girls, we look for connection, for proof we're not in it alone. I want that for you too.</p>
-        <div class="from">Nes x</div>
-        <a class="storylink" href="#my-story">Read my full story <span class="ar">→</span></a>
-      </div>
-      <div class="sci rv d4">
-        <b>Why this works: the psychology</b>
-        <p class="lead">Most of us don't need another gym plan or balanced meal idea. What we struggle with is consistency: showing up for long enough for it to stick. Psychologists call this the <i>intention–behaviour gap</i>. Knowing what to do isn't the problem. Doing it, again and again, is.</p>
-        <p class="lead" style="margin-bottom:0">And the research backs up what helped me. Sharing your progress <a href="https://pubmed.ncbi.nlm.nih.gov/26479070/" target="_blank" rel="noopener">(Harkin, 2016)</a> and having a partner <a href="https://pubmed.ncbi.nlm.nih.gov/21808077/" target="_blank" rel="noopener">(Feltz, 2011)</a> help people keep going. Kindness after a slip, not guilt, makes you more likely to try again <a href="https://pubmed.ncbi.nlm.nih.gov/22645164/" target="_blank" rel="noopener">(Breines &amp; Chen, 2012)</a>. And in therapy I learned that thoughts like "I always give up" aren't facts, just old stories. You rewrite them by giving yourself enough evidence that they're not true <a href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/overview/" target="_blank" rel="noopener">(NHS: CBT)</a>. Every photo you post is a bit more of that proof <a href="https://pubmed.ncbi.nlm.nih.gov/847061/" target="_blank" rel="noopener">(Bandura, 1977)</a>.</p>
+      <p class="lede">Tap any that sound like you.</p>
+      <div class="ticks drops" id="ticks">
+        <label style="--hl:var(--apricot-l)"><input type="checkbox"><span class="tx">I'm great until life gets busy. One holiday and I'm off track.<span class="rep" aria-live="polite"></span></span><span class="chev" aria-hidden="true"></span></label>
+        <label style="--hl:var(--mint-l)"><input type="checkbox"><span class="tx">I show up for everyone else. Me comes last.<span class="rep" aria-live="polite"></span></span><span class="chev" aria-hidden="true"></span></label>
+        <label style="--hl:var(--butter-l)"><input type="checkbox"><span class="tx">I keep putting things off until I feel ready.<span class="rep" aria-live="polite"></span></span><span class="chev" aria-hidden="true"></span></label>
+        <label style="--hl:var(--lilac-l)"><input type="checkbox"><span class="tx">I've started and stopped so many times, I now struggle to believe I can do it.<span class="rep" aria-live="polite"></span></span><span class="chev" aria-hidden="true"></span></label>
       </div>
     </div>
   </div>
@@ -1129,6 +1099,32 @@ section{padding:84px 0}
         <div class="mem" style="left:12%;top:50%;background:var(--mist)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10z"/></svg><b>Rest</b></div>
       </div>
       <p class="podcap">you pick one to start. your group and your buddy cheer you on x</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMING BACK -->
+<section class="back">
+  <div class="wrap">
+    <a class="rc rv" style="--c:#fff" href="https://www.instagram.com/reel/Ddox5yrI0xT/" target="_blank" rel="noopener"><span class="still"><img src="assets/ig-1.jpg" alt="Still from this reel" loading="lazy"><span class="pl" aria-hidden="true">▶</span></span><div class="q">So I'm back. Not because I feel ready. Just because I decide to show up.</div><div class="foot"><span>Watch on Instagram →</span></div></a>
+    <div>
+      <div class="eyebrow rv">Why I made this</div>
+      <h2 class="rv d1">I only ever kept going <span class="it">when someone noticed.</span></h2>
+      <p class="lede rv d2">For years I'd start strong, fall off, then spend weeks beating myself up. Every time I got on a streak, life happened: a holiday, people coming over, something big. I'd go off track, and coming back felt so hard. Those are the times I wished I had a group keeping me going.</p>
+      <div class="letter rv d3">
+        <p><b>So here's what changed.</b></p>
+        <p>Therapy last year helped me see it. I grew up with a lot of self-limiting beliefs, and I had so much proof of not following through that I'd decided consistency just wasn't for me. But the biggest thing therapy gave me was realising I wasn't alone in it. Just saying it out loud to someone made it lighter. That feeling is the root of Rebloom.</p>
+        <p>Then a few friends and I started helping each other get to the gym, posting a photo every time we went. Looking back on the past year, it's the most I've ever been. I've always done better when I'm part of something.</p>
+        <p>That gave me the courage to do something scary: share my thoughts out loud on Instagram. Since turning 30, I'm finally showing up for myself, and it feels so freeing.</p>
+        <p>It wasn't willpower. Old habits are hard to break. I just wasn't doing it alone, and someone noticed. My friends and I talk about this struggle all the time, and I don't think we're the only ones. As girls, we look for connection, for proof we're not in it alone. I want that for you too.</p>
+        <div class="from">Nes x</div>
+        <a class="storylink" href="#my-story">Read my full story <span class="ar">→</span></a>
+      </div>
+      <div class="sci rv d4">
+        <b>Why this works: the psychology</b>
+        <p class="lead">Most of us don't need another gym plan or balanced meal idea. What we struggle with is consistency: showing up for long enough for it to stick. Psychologists call this the <i>intention–behaviour gap</i>. Knowing what to do isn't the problem. Doing it, again and again, is.</p>
+        <p class="lead" style="margin-bottom:0">And the research backs up what helped me. Sharing your progress <a href="https://pubmed.ncbi.nlm.nih.gov/26479070/" target="_blank" rel="noopener">(Harkin, 2016)</a> and having a partner <a href="https://pubmed.ncbi.nlm.nih.gov/21808077/" target="_blank" rel="noopener">(Feltz, 2011)</a> help people keep going. Kindness after a slip, not guilt, makes you more likely to try again <a href="https://pubmed.ncbi.nlm.nih.gov/22645164/" target="_blank" rel="noopener">(Breines &amp; Chen, 2012)</a>. And in therapy I learned that thoughts like "I always give up" aren't facts, just old stories. You rewrite them by giving yourself enough evidence that they're not true <a href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/overview/" target="_blank" rel="noopener">(NHS: CBT)</a>. Every photo you post is a bit more of that proof <a href="https://pubmed.ncbi.nlm.nih.gov/847061/" target="_blank" rel="noopener">(Bandura, 1977)</a>.</p>
       </div>
     </div>
   </div>
@@ -1334,9 +1330,8 @@ section{padding:84px 0}
     <div class="mleft">
     <div class="pola rv">
       <div class="tape"></div>
-      <div class="p1"><img src="assets/nes-grass.jpg" alt="Nes lying on the grass, eyes closed, smiling" style="object-position:50% 40%"><div class="cap">happiest with my back on the grass x</div></div>
+      <div class="p1"><img src="assets/nes-woods.jpg" alt="Nes on a woodland path, arms wide open, face to the sky" style="object-position:50% 45%"><div class="cap">moving countries meant starting over</div></div>
     </div>
-    <div class="anno anno-story" aria-hidden="true"><svg viewBox="0 0 90 60"><path d="M70 54 C 40 52, 18 36, 16 8" fill="none" stroke="#B04A64" stroke-width="2.2" stroke-linecap="round"/><path d="M8 18 L16 6 L26 16" fill="none" stroke="#B04A64" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>happiest with my back on the grass.<br>this is the me I keep coming back to x</span></div>
     </div>
     <div>
       <div class="eyebrow rv">Meet Nes</div>
@@ -1365,7 +1360,7 @@ section{padding:84px 0}
         <div class="eyebrow rv">When you need more than the Club</div>
         <h2 class="rv d1">Therapy helped me. <span class="it">At £65 a session, I couldn't afford it.</span></h2>
         <p class="lede rv d2">Here's how I found support without paying for it.</p>
-        <blockquote class="thq rv d3">"Therapy isn't someone handing you a solution. It's someone helping you see your own thinking, and challenge it. A lot of what I believed about myself had no actual proof."</blockquote><figure class="snap inline" style="--r:-3deg;--w:220px"><img src="assets/nes-woods.jpg" alt="Nes on a woodland path, arms wide open, face to the sky" style="object-position:50% 45%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>moving countries meant starting over</figcaption></figure>
+        <blockquote class="thq rv d3">"Therapy isn't someone handing you a solution. It's someone helping you see your own thinking, and challenge it. A lot of what I believed about myself had no actual proof."</blockquote><figure class="snap inline" style="--r:-3deg;--w:220px"><img src="assets/nes-grass.jpg" alt="Nes lying on the grass, eyes closed, smiling" style="object-position:50% 40%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>happiest with my back on the grass x</figcaption></figure>
       </div>
       <ol class="route">
         <li class="rv"><span class="rn">1</span><div><b>Ask your work</b><p>Many employers offer free counselling sessions. I got about six this way.</p></div></li>
@@ -1619,16 +1614,13 @@ document.querySelectorAll('form.signup[data-thanks]').forEach(f=>f.addEventListe
 }));
 
 // ticks
-const ticks=document.getElementById('ticks'),made=document.getElementById('made');
+const ticks=document.getElementById('ticks');
 const R=[
  'Me too. Honestly, I\'m still working on it. Three good months, one holiday, and I\'m back at the start. But I\'ve found something that works for me, and I\'m hoping it works for you too. <span class="it">You don\'t restart. You come back.</span>',
  'When I started my corporate career, work took almost all my focus. Add family, friends and everything else in your twenties, and it\'s so easy to put yourself last. <span class="it">Rebloom is built for exactly that part.</span>',
  'I waited years to feel ready. It never came. What finally worked was starting before I felt it, with something small. <span class="it">Ready comes after you begin.</span>',
  'That\'s been the story of my life. Outside of work, I\'ve struggled to stay consistent with so much: projects I started, plans I put off, procrastination, all of it. <span class="it">You\'re not broken. You just haven\'t had people beside you.</span>'];
-if(ticks)ticks.addEventListener('change',e=>{const ins=[...ticks.querySelectorAll('input')];let k=e.target.checked?ins.indexOf(e.target):-1;
- if(k<0)for(let j=ins.length-1;j>=0;j--)if(ins[j].checked){k=j;break}
- if(k<0){made.classList.remove('on');return}
- made.innerHTML=R[k]+' <span class="hand">Nes x</span>';made.classList.add('on')});
+if(ticks)ticks.querySelectorAll('.rep').forEach((r,k)=>{r.innerHTML=R[k]+' <span class="hand">Nes x</span>'});
 
 // chat bubbles play in when visible
 const chat=document.getElementById('chat');
