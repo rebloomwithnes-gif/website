@@ -278,13 +278,29 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .ighead h2{margin:0}
 /* ticks */
 .tickwrap{background:#fff;border-radius:var(--r-lg);padding:clamp(28px,5vw,64px);box-shadow:var(--shadow);position:relative;overflow:hidden}
-#check .drops{grid-template-columns:1fr;max-width:820px;gap:10px;margin-top:24px}
-.drops .tx{flex:1;min-width:0}
-.drops .chev{flex:none;width:10px;height:10px;border:solid var(--berry);border-width:0 2px 2px 0;transform:rotate(45deg);margin:5px 6px 0 4px;transition:transform .3s,margin .3s}
-.drops label:has(input:checked) .chev{transform:rotate(-135deg);margin-top:11px}
-.drops .rep{display:block;max-height:0;overflow:hidden;opacity:0;font-family:var(--serif);font-size:17px;line-height:1.5;color:var(--ink-2);transition:max-height .45s ease,opacity .35s,margin .35s}
-.drops label:has(input:checked) .rep{max-height:420px;opacity:1;margin-top:12px}
-.drops .rep .hand{white-space:nowrap}
+.wchat{margin-top:28px;max-width:780px;background:var(--bg);border-radius:28px;padding:22px clamp(12px,3vw,26px);display:flex;flex-direction:column;gap:14px}
+.wrow{display:flex;align-items:flex-end;gap:10px}
+.wrow .av{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 25%;flex:none;box-shadow:0 0 0 2px #fff}
+.wb{background:#fff;border-radius:20px 20px 20px 6px;padding:12px 16px;font-size:16px;line-height:1.5;max-width:min(560px,86%);box-shadow:0 8px 20px -14px rgba(46,38,56,.4);color:var(--ink)}
+.wb .hand{white-space:nowrap}
+.witem{display:flex;flex-direction:column;gap:10px}
+.wme{align-self:flex-end;max-width:min(520px,88%);display:block;cursor:pointer;background:#fff;border:1.5px dashed var(--berry);color:var(--ink);border-radius:20px 20px 6px 20px;padding:12px 16px;font-size:16px;line-height:1.45;position:relative;transition:background .25s,color .25s,transform .25s,border-color .25s}
+.wme:hover{transform:translateY(-2px)}
+.wme input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.wme small{display:block;font-size:12px;margin-top:4px;color:var(--berry);font-weight:600;text-align:right}
+.wme:has(input:checked){background:var(--berry);border-style:solid;color:#fff;transform:none}
+.wme:has(input:checked) small{color:#F7D9DF}
+.wme:has(input:focus-visible){outline:2px solid var(--berry);outline-offset:3px}
+.wrep{display:none}
+.wrep.on{display:flex;animation:wpop .4s cubic-bezier(.2,1.3,.4,1) both}
+.wrep .dots{display:none;gap:5px;padding:6px 2px}
+.wrep.typing .dots{display:inline-flex}
+.wrep.typing .rt{display:none}
+.wrep .dots i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:wdot 1s infinite}
+.wrep .dots i:nth-child(2){animation-delay:.15s}.wrep .dots i:nth-child(3){animation-delay:.3s}
+@keyframes wpop{from{opacity:0;transform:translateY(10px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes wdot{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+@media (max-width:560px){.wb,.wme{font-size:15px}.wrow .av{width:28px;height:28px}.wchat{margin-left:-16px;margin-right:-16px;padding:16px 10px;border-radius:22px}.wb{max-width:calc(100% - 38px)}.wme{max-width:92%}}
 .ticks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
 @media (max-width:900px){.ticks{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.ticks{grid-template-columns:1fr}}
@@ -302,6 +318,12 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .back{background:var(--blush-l)}
 .back .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}
 .back .wrap>.rc{align-self:start}
+.back .wrap>.letter,.back .wrap>.sci{grid-column:1/-1;max-width:none;margin-top:0}
+.back .wrap>.letter{columns:2;column-gap:56px;padding:40px 48px 30px;transform:rotate(-.5deg)}
+.back .wrap>.letter p:first-child{column-span:all}
+.back .wrap>.letter p{break-inside:avoid}
+.back .wrap>.letter .from,.back .wrap>.letter .storylink{break-inside:avoid}
+@media (max-width:920px){.back .wrap>.letter{columns:1;padding:32px 26px 24px}}
 @media (max-width:920px){.back .wrap{grid-template-columns:1fr;gap:40px}.back .wrap>.rc{width:100%;max-width:380px}}
 .letter{background:#FFFDF9;border-radius:6px;padding:36px 36px 26px;margin-top:38px;position:relative;box-shadow:var(--shadow-lg);transform:rotate(-1deg);max-width:560px}
 .letter::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:28px;margin-left:-55px;background:rgba(243,178,60,.75);transform:rotate(2deg)}
@@ -1065,12 +1087,12 @@ section{padding:84px 0}
     <div class="tickwrap rv"><figure class="snap abs right" style="--r:5deg;--w:160px;--r2:28px;--t:22px"><img src="assets/nes-yellow.webp" alt="Nes in a beanie and puffer coat, smiling over her shoulder by a yellow wall" style="object-position:50% 30%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>a cold day I showed up anyway</figcaption></figure>
       <div class="eyebrow">Who it's for</div>
       <h2>This is for you if…</h2>
-      <p class="lede">Tap any that sound like you.</p>
-      <div class="ticks drops" id="ticks">
-        <label style="--hl:var(--apricot-l)"><input type="checkbox"><span class="tx">I'm great until life gets busy. One holiday and I'm off track.<span class="rep" aria-live="polite"></span></span><span class="chev" aria-hidden="true"></span></label>
-        <label style="--hl:var(--mint-l)"><input type="checkbox"><span class="tx">I show up for everyone else. Me comes last.<span class="rep" aria-live="polite"></span></span><span class="chev" aria-hidden="true"></span></label>
-        <label style="--hl:var(--butter-l)"><input type="checkbox"><span class="tx">I keep putting things off until I feel ready.<span class="rep" aria-live="polite"></span></span><span class="chev" aria-hidden="true"></span></label>
-        <label style="--hl:var(--lilac-l)"><input type="checkbox"><span class="tx">I've started and stopped so many times, I now struggle to believe I can do it.<span class="rep" aria-live="polite"></span></span><span class="chev" aria-hidden="true"></span></label>
+      <div class="wchat" id="ticks">
+        <div class="wrow"><img class="av" src="assets/nes-yellow.webp" alt="" loading="lazy"><div class="wb">Hey you. Tap any of these that sound like you, and I'll reply <span class="hand">x</span></div></div>
+        <div class="witem rv d1"><label class="wme"><input type="checkbox"><span>I'm great until life gets busy. One holiday and I'm off track.</span><small>Tap to send</small></label><div class="wrow wrep" aria-live="polite"><img class="av" src="assets/nes-yellow.webp" alt="" loading="lazy"><div class="wb"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="rt"></span></div></div></div>
+        <div class="witem rv d2"><label class="wme"><input type="checkbox"><span>I show up for everyone else. Me comes last.</span><small>Tap to send</small></label><div class="wrow wrep" aria-live="polite"><img class="av" src="assets/nes-yellow.webp" alt="" loading="lazy"><div class="wb"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="rt"></span></div></div></div>
+        <div class="witem rv d3"><label class="wme"><input type="checkbox"><span>I keep putting things off until I feel ready.</span><small>Tap to send</small></label><div class="wrow wrep" aria-live="polite"><img class="av" src="assets/nes-yellow.webp" alt="" loading="lazy"><div class="wb"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="rt"></span></div></div></div>
+        <div class="witem rv d4"><label class="wme"><input type="checkbox"><span>I've started and stopped so many times, I now struggle to believe I can do it.</span><small>Tap to send</small></label><div class="wrow wrep" aria-live="polite"><img class="av" src="assets/nes-yellow.webp" alt="" loading="lazy"><div class="wb"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="rt"></span></div></div></div>
       </div>
     </div>
   </div>
@@ -1112,6 +1134,7 @@ section{padding:84px 0}
       <div class="eyebrow rv">Why I made this</div>
       <h2 class="rv d1">I only ever kept going <span class="it">when someone noticed.</span></h2>
       <p class="lede rv d2">For years I'd start strong, fall off, then spend weeks beating myself up. Every time I got on a streak, life happened: a holiday, people coming over, something big. I'd go off track, and coming back felt so hard. Those are the times I wished I had a group keeping me going.</p>
+    </div>
       <div class="letter rv d3">
         <p><b>So here's what changed.</b></p>
         <p>Therapy last year helped me see it. I grew up with a lot of self-limiting beliefs, and I had so much proof of not following through that I'd decided consistency just wasn't for me. But the biggest thing therapy gave me was realising I wasn't alone in it. Just saying it out loud to someone made it lighter. That feeling is the root of Rebloom.</p>
@@ -1126,7 +1149,6 @@ section{padding:84px 0}
         <p class="lead">Most of us don't need another gym plan or balanced meal idea. What we struggle with is consistency: showing up for long enough for it to stick. Psychologists call this the <i>intention–behaviour gap</i>. Knowing what to do isn't the problem. Doing it, again and again, is.</p>
         <p class="lead" style="margin-bottom:0">And the research backs up what helped me. Sharing your progress <a href="https://pubmed.ncbi.nlm.nih.gov/26479070/" target="_blank" rel="noopener">(Harkin, 2016)</a> and having a partner <a href="https://pubmed.ncbi.nlm.nih.gov/21808077/" target="_blank" rel="noopener">(Feltz, 2011)</a> help people keep going. Kindness after a slip, not guilt, makes you more likely to try again <a href="https://pubmed.ncbi.nlm.nih.gov/22645164/" target="_blank" rel="noopener">(Breines &amp; Chen, 2012)</a>. And in therapy I learned that thoughts like "I always give up" aren't facts, just old stories. You rewrite them by giving yourself enough evidence that they're not true <a href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/overview/" target="_blank" rel="noopener">(NHS: CBT)</a>. Every photo you post is a bit more of that proof <a href="https://pubmed.ncbi.nlm.nih.gov/847061/" target="_blank" rel="noopener">(Bandura, 1977)</a>.</p>
       </div>
-    </div>
   </div>
 </section>
 
@@ -1611,7 +1633,7 @@ const R=[
  'When I started my corporate career, work took almost all my focus. Add family, friends and everything else in your twenties, and it\'s so easy to put yourself last. <span class="it">Rebloom is built for exactly that part.</span>',
  'I waited years to feel ready. It never came. What finally worked was starting before I felt it, with something small. <span class="it">Ready comes after you begin.</span>',
  'That\'s been the story of my life. Outside of work, I\'ve struggled to stay consistent with so much: projects I started, plans I put off, procrastination, all of it. <span class="it">You\'re not broken. You just haven\'t had people beside you.</span>'];
-if(ticks)ticks.querySelectorAll('.rep').forEach((r,k)=>{r.innerHTML=R[k]+' <span class="hand">Nes x</span>'});
+if(ticks)ticks.querySelectorAll('.witem').forEach((it,k)=>{const inp=it.querySelector('input'),rep=it.querySelector('.wrep'),st=it.querySelector('small');rep.querySelector('.rt').innerHTML=R[k]+' <span class="hand">Nes x</span>';let tm;inp.addEventListener('change',()=>{clearTimeout(tm);if(inp.checked){st.textContent='Sent ✓';rep.classList.add('on','typing');tm=setTimeout(()=>rep.classList.remove('typing'),1100)}else{st.textContent='Tap to send';rep.classList.remove('on','typing')}})});
 
 // chat bubbles play in when visible
 const chat=document.getElementById('chat');
