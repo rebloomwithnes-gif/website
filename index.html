@@ -284,6 +284,17 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .ighead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .ighead h2{margin:0}
 /* ticks */
+.tickbloom{position:absolute;right:clamp(16px,4vw,56px);top:clamp(20px,4vw,48px);width:clamp(84px,12vw,150px);aspect-ratio:1;pointer-events:none;z-index:2}
+.tickbloom svg{width:100%;height:100%;overflow:visible}
+.tb-spin{transform-origin:0 0;animation:tbspin 28s linear infinite}
+.tb-flower .tp{transform-box:view-box;transform-origin:0 0}
+.tickwrap.in .tb-flower .tp{animation:tbpetal .7s cubic-bezier(.2,1.5,.4,1) var(--d) both}
+.tb-p{position:absolute;left:50%;top:55%;width:10px;height:14px;border-radius:60% 0 60% 0;opacity:0;animation:tbfall 5s ease-in var(--dl) infinite}
+@keyframes tbspin{to{transform:rotate(360deg)}}
+@keyframes tbpetal{from{scale:0;opacity:0}to{scale:1;opacity:1}}
+@keyframes tbfall{0%{opacity:0;transform:translate(0,0) rotate(0)}15%{opacity:.9}100%{opacity:0;transform:translate(var(--x),120px) rotate(240deg)}}
+@media (max-width:520px){.tickbloom{width:78px;right:14px;top:18px}}
+@media (prefers-reduced-motion:reduce){.tb-spin,.tb-p,.tickwrap.in .tb-flower .tp{animation:none}.tb-p{display:none}}
 .tickwrap{background:#fff;border-radius:var(--r-lg);padding:clamp(28px,5vw,64px);box-shadow:var(--shadow);position:relative;overflow:hidden}
 .wchat{margin-top:28px;max-width:780px;background:var(--bg);border-radius:28px;padding:22px clamp(12px,3vw,26px);display:flex;flex-direction:column;gap:14px}
 .wrow{display:flex;align-items:flex-end;gap:10px}
@@ -1093,7 +1104,7 @@ section{padding:84px 0}
 <!-- SOUND LIKE YOU -->
 <section style="padding-top:0" id="check">
   <div class="wrap">
-    <div class="tickwrap rv"><figure class="snap abs right" style="--r:5deg;--w:160px;--r2:28px;--t:22px"><img src="assets/nes-yellow.webp" alt="Nes in a beanie and puffer coat, smiling over her shoulder by a yellow wall" style="object-position:50% 30%" loading="lazy" onerror="this.onerror=null;this.src='assets/nes-beach.webp'"><figcaption>a cold day I showed up anyway</figcaption></figure>
+    <div class="tickwrap rv"><div class="tickbloom" aria-hidden="true"><svg class="tb-flower" viewBox="-60 -60 120 120"><g class="tb-spin"><ellipse class="tp" rx="15" ry="25" cy="-26" fill="#F2BDB6" transform="rotate(0)" style="--d:0s"/><ellipse class="tp" rx="15" ry="25" cy="-26" fill="#CDBDE6" transform="rotate(60)" style="--d:0.12s"/><ellipse class="tp" rx="15" ry="25" cy="-26" fill="#F6C29A" transform="rotate(120)" style="--d:0.24s"/><ellipse class="tp" rx="15" ry="25" cy="-26" fill="#B9CFA3" transform="rotate(180)" style="--d:0.36s"/><ellipse class="tp" rx="15" ry="25" cy="-26" fill="#C3D8EC" transform="rotate(240)" style="--d:0.48s"/><ellipse class="tp" rx="15" ry="25" cy="-26" fill="#F7D9DF" transform="rotate(300)" style="--d:0.6s"/><circle r="13" fill="#F3B23C"/><circle r="5" fill="#E8956F"/></g></svg><span class="tb-p" style="--x:-40px;--dl:0s;background:#F2BDB6"></span><span class="tb-p" style="--x:30px;--dl:1.6s;background:#CDBDE6"></span><span class="tb-p" style="--x:-10px;--dl:3.2s;background:#F6C29A"></span></div>
       <div class="eyebrow">Who it's for</div>
       <h2>This is for you if…</h2>
       <div class="wchat" id="ticks">
@@ -1147,10 +1158,10 @@ section{padding:84px 0}
     </div>
       <div class="letter rv d3">
         <p><b>So here's what changed.</b></p>
-        <p>Therapy last year helped me see it. I grew up with a lot of self-limiting beliefs, and I had so much proof of not following through that I'd decided consistency just wasn't for me. But the biggest thing therapy gave me was realising I wasn't alone in it. Just saying it out loud to someone made it lighter. That feeling is the root of Rebloom.</p>
+        <p>Therapy last year helped me see I wasn't alone in it. Just saying it out loud to someone made it lighter. That feeling is the root of Rebloom.</p>
         <p>Then a few friends and I started helping each other get to the gym, posting a photo every time we went. Looking back on the past year, it's the most I've ever been. I've always done better when I'm part of something.</p>
         <p>That gave me the courage to do something scary: share my thoughts out loud on Instagram. Since turning 30, I'm finally showing up for myself, and it feels so freeing.</p>
-        <p>It wasn't willpower. Old habits are hard to break. I just wasn't doing it alone, and someone noticed. My friends and I talk about this struggle all the time, and I don't think we're the only ones. As girls, we look for connection, for proof we're not in it alone. I want that for you too.</p>
+        <p>It wasn't willpower. I just wasn't doing it alone. My friends and I talk about this struggle all the time, and I don't think we're the only ones. As girls, we look for connection, for proof we're not in it alone. I want that for you too.</p>
         <div class="from">Nes x</div>
         <a class="storylink" href="#my-story">Read my full story <span class="ar">→</span></a>
       </div>
@@ -1366,7 +1377,7 @@ section{padding:84px 0}
         <p>Before work, I felt like I had things under control. Then I built a career in corporate, and everything else took a back seat. Outside of work, I really struggled to keep at anything.</p>
         <p>So I'd start strong, fall off, and spend weeks beating myself up. Every time I didn't stick with something, my brain kept the receipt. So when I started again, it already "knew" how it would end. Maybe you know that loop too.</p>
         <p>It was only after I moved away from home that I started questioning those voices. They weren't true. <span class="it">They were just old.</span> Later, in therapy, I found out there's a name for what I'd been doing: cognitive restructuring. Noticing an old thought, asking if it's even true, and giving yourself enough proof to write a new one.</p>
-        <p>The other thing I noticed? I only ever kept going when someone noticed. So I built Rebloom, for you and for me. A small group that sees you show up, and me right there with you, sharing what's working as I go.</p>
+        <p>Rewriting old thoughts helped me start. What kept me going was other people. So I built Rebloom, for you and for me: a small group that sees you show up, and me right there with you, sharing what's working as I go.</p>
         <p>I'm still a work in progress. I still catch myself waiting to feel ready. But it's made me so curious about how we think and why we do what we do. So I'm now studying behavioural psychology and working towards getting certified, so I can bring what I learn back into Rebloom.</p>
         <p>And the name? I'm an August Leo. Sunflowers, sunny energy, and "blooming" in my bio for as long as I can remember. But nobody stays in bloom forever, and some days it's felt like faking it. That's where the name comes from. Not blooming. <em>Re</em>blooming. Choosing it again, especially on the days you don't feel it.</p>
         <p>Every morning you wake up, you get another go. So do I.</p>
