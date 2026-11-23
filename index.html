@@ -477,6 +477,12 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .stg p{font-size:14px;color:var(--muted);margin:6px 0 0}
 .stg.mid .bud{background:var(--blush);box-shadow:0 0 0 6px var(--blush-l),var(--shadow)}
 .rhythm{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:56px}
+.circle .areas{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin:48px auto 0;max-width:980px}
+.circle .areas h3{font-size:clamp(24px,2.6vw,32px);margin:6px 0 10px}
+.circle .areas p{color:var(--ink-2);font-size:17px;line-height:1.6;margin:0;max-width:440px}
+.circle .areas .podmap{margin:0}
+.circle .areas{margin-bottom:32px}
+@media (max-width:920px){.circle .areas{grid-template-columns:1fr;gap:24px;text-align:center}.circle .areas p{margin:0 auto}}
 .getlinks{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:40px 0 0}
 .rhythm div{background:#fff;border-radius:var(--r-md);padding:16px 22px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px}
 .rhythm .n{font-family:var(--serif);font-size:30px;line-height:1}
@@ -1125,6 +1131,20 @@ section{padding:84px 0}
       <div class="eyebrow rv">What you get</div>
       <h2 class="rv d1">30 days of <span class="it">not doing it alone.</span></h2>
       <p class="lede rv d2">One goal, a small group of six, and a buddy who notices if you go quiet. Do the thing, post a photo, and reflect live with me every Sunday. Miss a few days? You never start from zero.</p>
+    </div>
+    <div class="areas">
+      <div class="areastext"><div class="eyebrow rv">Four areas</div><h3 class="rv d1">Pick one to start.</h3><p class="rv d2">Your one goal comes from one of four areas: <b>Mind</b> for calm, <b>Move</b> for energy, <b>Nourish</b> for food that makes you feel good, and <b>Rest</b> for sleep. We'll choose yours together on our call.</p></div>
+      <div class="podmap rv d2">
+      <div class="pod" aria-hidden="true">
+        <div class="ring"></div>
+        <div class="core"><svg viewBox="-20 -20 40 40"><use href="#fl6" x="-20" y="-20" width="40" height="40" fill="#F2BDB6" style="--fc:#F3B23C"/></svg><b>your group</b></div>
+        <div class="mem" style="left:50%;top:8%;background:var(--lilac)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 14.2c.9 1.2 2.1 1.8 3.5 1.8s2.6-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01" stroke-width="2.6"/></svg><b>Mind</b></div>
+        <div class="mem" style="left:88%;top:50%;background:var(--apricot)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 8v8M17.5 8v8M3.5 10v4M20.5 10v4M6.5 12h11"/></svg><b>Move</b></div>
+        <div class="mem" style="left:50%;top:92%;background:var(--mint)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7.5c-1.5-1.3-4.8-1.4-6 1.2-1.3 2.8.3 7.6 2.7 9.4 1.1.8 2.1.6 3.3 0 1.2.6 2.2.8 3.3 0 2.4-1.8 4-6.6 2.7-9.4-1.2-2.6-4.5-2.5-6-1.2z"/><path d="M12 7.5c0-1.6.6-3 2-4"/></svg><b>Nourish</b></div>
+        <div class="mem" style="left:12%;top:50%;background:var(--mist)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10z"/></svg><b>Rest</b></div>
+      </div>
+      
+      </div>
     </div>
     <div class="season">
       <svg class="vine" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M60 30 C 200 0, 300 60, 420 30 S 640 0, 760 30 S 1000 60, 1140 30" fill="none" stroke="#8FA876" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round"/></svg>
