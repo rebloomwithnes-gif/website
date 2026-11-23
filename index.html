@@ -1336,8 +1336,7 @@ section{padding:84px 0}
       <svg class="flower rv" viewBox="-250 -250 500 500" role="group" aria-label="Choose a petal" id="flower"></svg>
       <div class="pcard rv d2" aria-live="polite">
         <div class="swatch" id="psw"></div>
-        <div class="fade" id="pc"><h3>Mind</h3><p class="sub">Mental health and calm</p><dl><div><dt>Three questions to start</dt><ol><li>On an average day, how does your head feel: calm, busy, foggy or low?</li><li>How would you like to feel most days?</li><li>When does your mind feel loudest, and what usually sets it off?</li></ol></div><div><dt>An example intention</dt><dd>I start each day feeling calm and in control.</dd></div><div><dt>The small version</dt><dd>A quick voice brain-dump before bed</dd></div><div><dt>What you track</dt><dd>Mood, 1 to 5</dd></div></dl></div>
-        <p class="note">No names, health details or money. Food and movement are never about weight.</p>
+        <div class="fade" id="pc"><h3>Mind</h3><p class="sub">Mental health and calm</p><dl><div><dt>Three questions to start</dt><ol><li>On an average day, how does your head feel: calm, busy, foggy or low?</li><li>How would you like to feel most days?</li><li>When does your mind feel loudest, and what usually sets it off?</li></ol></div></dl></div>
       </div>
     </div>
     <p class="smallv rv" id="twomin">Your goal also gets a <b>small version</b> for your busiest days. Smaller, but still a real show-up. We'll work out yours together. <span>Small enough for your busiest day. Big enough because you showed up!</span></p>
@@ -1648,7 +1647,7 @@ if(chat)new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){chat.querySel
 
 // petal flower
 const P=[
- {n:'Mind',s:'Mental health and calm',c:'#CDBDE6',q:['On an average day, how does your head feel: calm, busy, foggy or low?','How would you like to feel most days?','When does your mind feel loudest, and what usually sets it off?'],i:'I start each day feeling calm and in control.',h:'A quick voice brain-dump before bed',t:'Mood, 1 to 5'},
+ {n:'Mind',s:'Mental health and calm',c:'#CDBDE6',q:['On an average day, how does your head feel: calm, busy, foggy or low?','How would you like to feel most days?','When does your mind feel loudest, and what usually sets it off?'],i:'I start each day feeling calm and in control.',h:'A few minutes of voice journalling before bed',t:'Mood, 1 to 5'},
  {n:'Move',s:'Fitness and energy',c:'#F6C29A',q:['How does your body feel moving through a normal week right now?','What kind of movement do you enjoy, or used to?','What usually stops you moving, and what\'s the smallest version you could do anyway?'],i:'I move my body every day in ways I enjoy.',h:'A 20-minute home workout on your mat',t:'Moved today: yes or no'},
  {n:'Nourish',s:'Food that makes you feel good',c:'#B9CFA3',q:['How do you feel after most meals right now: energised, sluggish or rushed?','What would eating well look like for you, in a way that feels good?','When does eating well fall apart: busy days, evenings, eating on the go?'],i:'I eat in a way that makes me feel good.',h:'Add one colourful, home-made plate a day',t:'Nourishing meals, 0 to 3'},
  {n:'Rest',s:'Sleep and recovery',c:'#C3D8EC',q:['How rested do you feel when you wake up most mornings?','What would a good evening wind-down look like for you?','What happens in the hour before bed right now?'],i:'I protect my rest so I can show up fully.',h:'Screens down 20 minutes before bed',t:'Rested, 1 to 5'},
@@ -1664,7 +1663,7 @@ function show(k){const p=P[k];
  fl.querySelectorAll('.pt').forEach(g=>{const on=+g.dataset.k===k;g.classList.toggle('on',on);g.setAttribute('aria-pressed',on);g.style.transform=on?`translate(${Math.sin(k*Math.PI/2)*12}px,${-Math.cos(k*Math.PI/2)*12}px)`:''});
  const sel=fl.querySelector(`.pt[data-k="${k}"]`),ctr=fl.querySelector('circle'),hadFocus=document.activeElement===sel;fl.insertBefore(sel,ctr);if(hadFocus)sel.focus();
  psw.style.background=p.c;pc.style.opacity=0;
- setTimeout(()=>{pc.innerHTML=`<h3>${p.n}</h3><p class="sub">${p.s}</p><dl><div><dt>Three questions to start</dt><ol>${p.q.map(x=>`<li>${x}</li>`).join('')}</ol></div><div><dt>An example intention</dt><dd>${p.i}</dd></div><div><dt>The small version</dt><dd>${p.h}</dd></div><div><dt>What you track</dt><dd>${p.t}</dd></div></dl>`;pc.style.opacity=1},180)}
+ setTimeout(()=>{pc.innerHTML=`<h3>${p.n}</h3><p class="sub">${p.s}</p><dl><div><dt>Three questions to start</dt><ol>${p.q.map(x=>`<li>${x}</li>`).join('')}</ol></div></dl>`;pc.style.opacity=1},180)}
 fl.addEventListener('click',e=>{const g=e.target.closest('.pt');if(g)show(+g.dataset.k)});
 fl.addEventListener('keydown',e=>{const g=e.target.closest('.pt');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();show(+g.dataset.k)}});
 show(0);}
