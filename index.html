@@ -648,6 +648,8 @@ footer .legal{flex-basis:100%;border-top:1px solid #3A3446;padding-top:22px;disp
 .diff ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:calc(100% - 250px)}
 @media (max-width:960px){.diff ul{max-width:none}}
 @media (max-width:760px){.diff ul{grid-template-columns:1fr}.diff{padding:24px 20px 20px}}
+.diffp{margin:0;max-width:calc(100% - 250px);font-size:17px;line-height:1.6;color:var(--ink-2)}
+@media (max-width:960px){.diffp{max-width:none}}
 .diff li{background:var(--pc);border-radius:var(--r-md);padding:16px 18px;color:var(--ink-2);font-size:15px;line-height:1.4}
 .diff li b{color:var(--ink);display:block;font-size:17px;margin-bottom:2px}
 .diff{position:relative}.diff::after{content:"";display:block;clear:both}
@@ -1203,14 +1205,7 @@ section{padding:84px 0}
     </div>
     <div class="diff rv"><figure class="snap dsnap" style="--r:4deg"><img src="assets/nes-shore.jpg" alt="Nes walking barefoot along a sea wall at sunset, smiling" style="object-position:50% 45%" loading="lazy"><figcaption>small steps, one at a time</figcaption></figure>
       <h3>So Rebloom is built differently</h3>
-      <ul>
-        <li style="--pc:var(--lilac-l)"><b>Built for coming back</b>One missed day doesn't reset you.</li>
-        <li style="--pc:var(--apricot-l)"><b>A small group of six</b>Matched to the goal you pick.</li>
-        <li style="--pc:var(--mint-l)"><b>A buddy</b>Who notices when you go quiet.</li>
-        <li style="--pc:var(--butter-l)"><b>Me, personally</b>Your call, your progress link, every Sunday live.</li>
-        <li style="--pc:var(--mist-l)"><b>No competition</b>The only person you're racing is you.</li>
-        <li style="--pc:var(--blush-l)"><b>Never about your body</b>No calories or weigh-ins.</li>
-      </ul>
+      <p class="diffp">It's built for coming back, so one missed day doesn't reset you. You get a small group of six matched to your goal, a buddy who notices when you go quiet, and me, personally: on your call, on your progress link and live every Sunday. There's no competition. The only person you're racing is you.</p>
     </div>
   </div>
 </section>
