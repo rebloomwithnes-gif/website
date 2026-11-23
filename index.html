@@ -206,6 +206,10 @@ nav.top .links a:hover::after{right:0}
 .tickwrap{overflow:visible}
 .tickwrap .snap.abs{top:-36px}
 .snap.inline{margin-top:36px}
+.ckcard{position:relative}
+.ckcard .cksnap{position:relative;display:block;margin:18px 8px 6px auto;padding-bottom:28px}
+.ckcard .cksnap figcaption{font-size:12.5px;display:block}
+.ckcard .cksnap::before{display:block}
 .hello{display:flex;align-items:center;gap:12px;margin-bottom:18px}
 .hello img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 22%;box-shadow:0 0 0 3px #fff,var(--shadow)}
 .hello .av{width:56px;height:56px;border-radius:50%;flex:none;box-shadow:0 0 0 3px #fff,var(--shadow);background:url("assets/nes-hillside.webp") -191px -131px/448% auto no-repeat}
@@ -466,7 +470,6 @@ nav.top .links a[aria-current="page"]::after{right:0}
 .rhythm div{background:#fff;border-radius:var(--r-md);padding:16px 22px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px}
 .rhythm .n{font-family:var(--serif);font-size:30px;line-height:1}
 .rhythm small{display:block;font-size:13px;color:var(--muted)}
-
 /* circle */
 .circle{background:var(--ink);color:#F3EEF6;overflow:hidden}
 .circle .lede{color:#C9C1D4}
@@ -758,8 +761,11 @@ footer .legal{flex-basis:100%;border-top:1px solid #3A3446;padding-top:22px;disp
 .mleft .pola .p1{padding:0;border-radius:999px 999px 30px 30px;overflow:hidden;transform:none;background:var(--blush)}
 .mleft .pola .p1 img{aspect-ratio:4/5;border-radius:0}
 .mleft .pola .p1 .cap,.mleft .pola .tape{display:none}
-.iggrid a{border-radius:140px 140px 22px 22px}
-.still{border-radius:120px 120px 18px 18px}
+.iggrid a{border-radius:50%;aspect-ratio:1;width:100%;max-width:230px;justify-self:center;box-shadow:0 0 0 6px rgba(255,255,255,.75),var(--shadow)}
+.iggrid a::after{top:auto;right:12%;bottom:12%}
+.iggrid{gap:22px;justify-items:center}
+.still{border-radius:50%;aspect-ratio:1;width:min(100%,240px);margin-left:auto;margin-right:auto;box-shadow:0 0 0 6px rgba(255,255,255,.7),0 14px 28px -16px rgba(46,38,56,.35)}
+.still .pl{right:9%;bottom:9%}
 /* waitlist pop-up */
 html.wl-open{overflow:hidden}
 .wl{position:fixed;inset:0;z-index:300;background:rgba(46,38,56,.45);display:grid;place-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));animation:wlfade .3s ease}
@@ -1103,7 +1109,7 @@ section{padding:84px 0}
 
 <!-- CIRCLE -->
 <section class="circle" id="circle">
-  <div class="wrap">
+  <div class="wrap" style="position:relative"><figure class="snap abs right" style="--r:6deg;--w:160px;--r2:0px;--t:-10px"><img src="assets/nes-hoodie.jpg" alt="Nes in a pink hoodie and grey beanie, arm stretched up under a cloudy sky" style="object-position:50% 40%" loading="lazy"><figcaption>grey skies, still showing up</figcaption></figure>
     <div class="center">
       <div class="eyebrow rv">What you get</div>
       <h2 class="rv d1">30 days of <span class="it">not doing it alone.</span></h2>
@@ -1219,7 +1225,7 @@ section{padding:84px 0}
     <div class="center">
       <div class="eyebrow rv">An honest question</div>
       <h2 class="rv d1">Why not just do this with your friends? <span class="it">Honestly, some of you can.</span></h2>
-      <p class="lede rv d2">If you've got that, hold onto it. And if you don't have a group like that, Rebloom is for you. I built it for me first. I needed a bit of girlhood and the push that only comes from a group.</p>
+      <p class="lede rv d2">If you've got that, hold onto it. But if you feel alone in it and don't have a group like that, I built Rebloom for you: a bit of girlhood, and the push that only comes from a group.</p>
     </div>
     <div class="whygrid swipe">
       <article class="rv" style="--pc:var(--lilac-l)"><h3>Your people are far away</h3><p>Moving countries taught me this. Building friendships from scratch is hard.</p></article>
@@ -1283,7 +1289,7 @@ section{padding:84px 0}
       <p class="lede rv d2">Do the thing, then post the proof. It takes about a minute.</p>
     </div>
     <div class="peekgrid swipe">
-      <article class="rv" style="--pc:var(--butter-l)"><div class="ptime">Every day · 1 minute</div><h3>Do it, snap it, post it</h3><ol><li>Do your goal, or its small version.</li><li>Snap a photo: your book, your trainers, your lunch.</li><li>Post it in your group. Done.</li></ol></article>
+      <article class="rv ckcard" style="--pc:var(--butter-l)"><div class="ptime">Every day · 1 minute</div><h3>Do it, snap it, post it</h3><ol><li>Do your goal, or its small version.</li><li>Snap a photo: your book, your trainers, your lunch.</li><li>Post it in your group. Done.</li></ol><figure class="snap cksnap" style="--r:5deg;--w:118px"><img src="assets/nes-buckethat.jpg" alt="Nes in a white bucket hat, eyes closed, arms out on a grassy field" style="object-position:50% 30%" loading="lazy"><figcaption>today's check-in &#10003;</figcaption></figure></article>
       <article class="rv d1" style="--pc:var(--lilac-l)"><div class="ptime">Every day · your buddy</div><h3>Someone notices</h3><ol><li>Your buddy sees your photo and cheers you on.</li><li>Gone quiet for a couple of days? They check in.</li><li>You do the same for them.</li></ol></article>
       <article class="rv d2" style="--pc:var(--blush-l)"><div class="ptime">Sunday reflection · 15 minutes</div><h3>Looking back, gently</h3><ol><li>What went well this week, even slightly?</li><li>Where did I wobble, and what did it teach me?</li><li>What's one thing I'll make smaller next week?</li></ol></article>
     </div>
@@ -1402,10 +1408,11 @@ section{padding:84px 0}
     <div class="tgrid">
       <div>
         <div class="eyebrow rv">Say hello</div>
-        <h2 class="rv d1">However you're feeling, <span class="it">you can tell me.</span></h2>
-        <p class="lede rv d2">Not sure if Rebloom is for you? I read every message myself.</p>
+        <h2 class="rv d1">Got a question? <span class="it">Just ask.</span></h2>
+        <p class="lede rv d2">Not sure if Rebloom is for you? Send me a message, and let's chat and see.</p>
         <div class="ways">
           <a class="rv" href="https://www.instagram.com/makingsensewithnes/" target="_blank" rel="noopener"><span class="ic" style="background:var(--blush)">✉</span><span><b>Send me a DM</b><span>@makingsensewithnes on Instagram</span></span></a>        </div>
+        <figure class="snap inline hellosnap rv d2" style="--r:-3deg;--w:210px"><img src="assets/nes-bluesky.jpg" alt="Nes smiling up at a bright blue sky, hair blowing in the wind" style="object-position:50% 30%" loading="lazy"><figcaption>come say hi, I read every one x</figcaption></figure>
         <div class="care rv d2"><span>I'm not a therapist. If you're struggling, Samaritans are free any time on <b>116 123</b> (UK). In an emergency, call 999.</span></div>
       </div>
       <form class="tform rv d1" data-thanks="t2"><input name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
@@ -1438,12 +1445,9 @@ section{padding:84px 0}
       <p class="lede rv d2">Anything else? <a href="#say-hello">Ask me directly.</a></p>
     </div>
     <div class="rv d1">
-      <details><summary>Do I need ChatGPT or Claude?</summary><p>No. A notebook or voice memo works just as well. AI is an optional shortcut.</p></details>
-      <details><summary>What about my privacy?</summary><p>The questions never ask for names, health details or money. Nobody reads your answers but you.</p></details>
-      <details><summary>I've fallen off more times than I can count.</summary><p>Me too. Rebloom is built for coming back, not for people who never fall off.</p></details>
       <details><summary>Is this therapy?</summary><p>No. It's for goals and habits, done together. Therapy helped me, and I share how I found it for free on <a href="#my-story">my story page</a>.</p></details>
-      <details><summary>What if I miss a week?</summary><p>You rejoin with today's small version. Your 30 days can take 40.</p></details>
-      <details><summary>Is it about weight or dieting?</summary><p>Never. No calories, weigh-ins or body goals.</p></details>
+      <details><summary>What if I miss a day, or a week?</summary><p>You never start from zero. Just post today's photo and carry on. Your 30 days can take 40.</p></details>
+      <details><summary>Who sees my photos?</summary><p>Only your small group, your buddy and me. What's shared in the group stays in the group. No screenshots, ever.</p></details>
     </div>
   </div>
 </section>
