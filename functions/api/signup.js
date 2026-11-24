@@ -50,7 +50,8 @@ export async function onRequestPost({ request, env }) {
       html: `<div style="font-family:Arial,sans-serif;font-size:16px;line-height:1.6;color:#2E2638;max-width:520px">
 <p>Hi,</p>
 <p>Thank you for leaving your email. Here's <a href="${GUIDE_URL}" style="color:#9B4F6A;font-weight:bold">my mini-guide</a>: what to expect from Rebloom, and 5 questions to find your bloom. No need to write anything down.</p>
-<p>Your first month is free while Rebloom launches. When you're ready, the next step is a 15-minute call with me. It's not an interview, just a chat.</p>
+<p>Your first month is free while Rebloom launches. Pricing comes after the trial, and I'll share it with you before your free month ends. Nothing to pay now, and no commitment to carry on.</p>
+<p>When you're ready, the next step is a 15-minute call with me. It's not an interview, just a chat.</p>
 <p style="margin:22px 0"><a href="${esc(bookingUrl)}" style="background:#9B4F6A;color:#fff;text-decoration:none;padding:12px 22px;border-radius:99px;font-weight:bold;display:inline-block">Pick a time for our call</a></p>
 <p>If anything comes up, just reply to this email. It comes straight to me.</p>
 <p style="font-size:20px;color:#B04A64;margin-top:24px">Nes x</p>
@@ -100,6 +101,7 @@ export async function onRequestPost({ request, env }) {
     html: `<div style="font-family:Arial,sans-serif;font-size:16px;line-height:1.6;color:#2E2638;max-width:520px">
 <p>Hi ${esc(name)},</p>
 <p>Thank you for claiming your spot. I read every one of these myself, so I'll read yours properly.</p>
+<p>Your first month is free while Rebloom launches. Pricing comes after the trial, and I'll share it with you before your free month ends. Nothing to pay now, and no commitment to carry on.</p>
 ${booking}
 <p>If anything comes up before then, just reply to this email. It comes straight to me.</p>
 <p style="font-size:20px;color:#B04A64;margin-top:24px">Nes x</p>
