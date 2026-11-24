@@ -4,48 +4,82 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#FBF5EA">
-<title>Privacy · Rebloom with Nes</title>
-<meta name="description" content="How Rebloom looks after your details: what I collect, why, who helps me, and how to have it deleted.">
+<title>Privacy Notice · Rebloom with Nes</title>
+<meta name="description" content="Rebloom's privacy notice: what personal data we collect, why, our lawful bases, who we share it with, how long we keep it and your rights.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Shantell+Sans:wght@500..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#FBF5EA; --paper:#FFFFFF; --ink:#2E2638; --ink-2:#4A4256; --muted:#6B6276; --line:#EADFD3;
-  --berry:#B04A64; --berry-d:#933B52; --blush:#F2BDB6; --lilac:#CDBDE6; --mint:#B9CFA3; --butter:#F3B23C;
-  --blush-l:#FBE9E6; --lilac-l:#F2EDFA;
-  --r-lg:32px; --r-md:22px;
+  --berry:#B04A64; --berry-d:#933B52; --blush-l:#FBE9E6; --lilac-l:#F2EDFA;
+  --r-lg:28px; --r-md:18px;
   --shadow:0 1px 2px rgba(46,38,56,.04),0 12px 32px -12px rgba(46,38,56,.18);
-  --sans:Parkinsans,-apple-system,sans-serif; --hand:"Shantell Sans",cursive;
+  --sans:Parkinsans,-apple-system,sans-serif;
 }
 *{box-sizing:border-box}
 html{overflow-x:clip}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:var(--berry);text-underline-offset:3px}
-h1,h2{font-family:var(--sans);font-weight:600;line-height:1.1;letter-spacing:-.03em;margin:0 0 .45em;text-wrap:balance}
-h1{font-size:clamp(40px,7vw,64px)}
-h2{font-size:24px;letter-spacing:-.01em;margin-top:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--berry);text-underline-offset:3px;overflow-wrap:anywhere}
+h1,h2,h3{font-family:var(--sans);font-weight:600;line-height:1.15;letter-spacing:-.02em;margin:0 0 .5em;text-wrap:balance}
+h1{font-size:clamp(34px,6vw,52px);letter-spacing:-.03em}
+h2{font-size:21px;display:flex;gap:10px;align-items:baseline}
+h2 .n{color:var(--berry);font-size:16px;min-width:1.6em}
+h3{font-size:16.5px;margin-top:1.2em}
 p,li{text-wrap:pretty}
-p{margin:0 0 1em}
+p{margin:0 0 .9em}
 ul{margin:0 0 1em;padding-left:1.2em}
-li{margin:0 0 .5em}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+li{margin:0 0 .45em}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
 header{padding:22px 0}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{font:500 30px/1 var(--sans);letter-spacing:-.03em;color:var(--ink);text-decoration:none;display:inline-flex;align-items:flex-start}
 .logo svg{width:15px;height:15px;margin:-4px 0 0 1px}
 .back{font-weight:600;font-size:15px;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);border-radius:99px;padding:8px 16px;white-space:nowrap}
-.intro{padding:28px 0 12px}
-.eyebrow{font-weight:600;color:var(--berry);font-size:16px;margin-bottom:10px}
-.lede{font-size:19px;color:var(--ink-2);max-width:620px}
-.hand{font-family:var(--hand);font-weight:600;color:var(--berry)}
-.card{background:var(--paper);border-radius:var(--r-lg);padding:28px 24px;box-shadow:var(--shadow);margin:0 0 18px}
-.card :last-child{margin-bottom:0}
+.intro{padding:24px 0 8px}
+.eyebrow{font-weight:600;color:var(--berry);font-size:15px;margin-bottom:8px}
+.meta{font-size:14px;color:var(--muted);margin:0 0 18px}
+.dl{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:15px;border-radius:99px;padding:11px 20px;margin:4px 0 24px}
+.toc{background:var(--lilac-l);border-radius:var(--r-md);padding:18px 22px;margin:0 0 22px;font-size:15px}
+.toc b{display:block;margin-bottom:6px}
+.toc ol{margin:0;padding-left:1.4em;columns:2;column-gap:28px}
+.toc li{margin:0 0 4px;break-inside:avoid}
+.toc a{color:var(--ink);text-decoration:none}
+.card{background:var(--paper);border-radius:var(--r-lg);padding:26px 22px;box-shadow:var(--shadow);margin:0 0 16px}
+.card>:last-child{margin-bottom:0}
 .k{font-weight:600}
-.care{background:var(--blush-l);border-radius:var(--r-md);padding:20px 22px;margin:28px 0}
-footer{padding:28px 0 48px;font-size:14px;color:var(--muted)}
-@media (min-width:700px){.card{padding:36px 40px}}
+.basis{border-top:1px solid var(--line);padding:14px 0 6px}
+.basis:first-of-type{border-top:0;padding-top:4px}
+.basis p{margin:0 0 .35em}
+.basis .lb{font-size:14.5px;color:var(--ink-2)}
+.basis .lb b{color:var(--berry-d);font-weight:600}
+.ret{width:100%;border-collapse:collapse;font-size:15px}
+.ret th,.ret td{text-align:left;vertical-align:top;padding:10px 0;border-top:1px solid var(--line)}
+.ret th{font-weight:600;padding-right:16px;width:46%}
+.ret tr:first-child th,.ret tr:first-child td{border-top:0}
+.care{background:var(--blush-l);border-radius:var(--r-md);padding:18px 22px;margin:22px 0}
+footer{padding:22px 0 44px;font-size:14px;color:var(--muted)}
+@media (max-width:560px){.toc ol{columns:1}.ret,.ret tbody,.ret tr,.ret th,.ret td{display:block;width:auto}.ret th{padding:12px 0 2px;border-top:1px solid var(--line)}.ret td{border-top:0;padding:0 0 10px}.ret tr:first-child th{border-top:0}}
+@media (min-width:700px){.card{padding:32px 38px}}
+@media print{
+  @page{size:A4;margin:16mm 16mm 18mm}
+  body{background:#fff;font-size:10.5pt;line-height:1.5}
+  header .back,.dl,.noprint{display:none!important}
+  header{padding:0 0 4mm}
+  .intro{padding:0}
+  h1{font-size:24pt}
+  h2{font-size:13pt}
+  .card{box-shadow:none;border:0;border-top:1.5px solid var(--line);border-radius:0;padding:5mm 0 1mm;margin:0;break-inside:auto}
+  .toc{margin-bottom:2mm}
+  h2,h3{break-after:avoid}
+  .basis,.ret tr,li{break-inside:avoid}
+  .toc{border-radius:10px}
+  .toc ol{columns:2}
+  .ret,.ret tbody,.ret tr,.ret th,.ret td{display:revert}
+  a{color:var(--berry-d)}
+  footer{padding:2mm 0 0}
+}
 </style>
 </head>
 <body>
@@ -58,90 +92,179 @@ footer{padding:28px 0 48px;font-size:14px;color:var(--muted)}
 
 <main class="wrap">
   <section class="intro">
-    <div class="eyebrow">Privacy</div>
-    <h1>How I look after your details.</h1>
-    <p class="lede">You're trusting me with something personal. This page explains, in plain words, what I keep, why, who helps me, and how to have it deleted.</p>
-    <p style="font-size:14px;color:var(--muted)">Last updated: November 2026</p>
+    <div class="eyebrow">Rebloom with Nes</div>
+    <h1>Privacy Notice</h1>
+    <p class="meta">Version 1.0 · Effective from November 2026</p>
+    <p>This notice explains how Rebloom collects, uses, shares and protects your personal data when you visit rebloomwithnes.co.uk, sign up, contact us or take part in a Rebloom programme. It also explains your rights under UK data protection law, including the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+    <a class="dl" href="/assets/rebloom-privacy-notice.pdf" download>Download as PDF</a>
   </section>
 
-  <section class="card">
-    <h2>Who I am</h2>
-    <p>Rebloom is run by me, Nes. I decide how your details are used, so I'm responsible for looking after them.</p>
-    <p>Any question, or to see, change or delete your details: <a href="mailto:hello@rebloomwithnes.co.uk">hello@rebloomwithnes.co.uk</a>. You can also reply to any email I've sent you.</p>
+  <nav class="toc" aria-label="Contents">
+    <b>Contents</b>
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#collect">Personal data we collect</a></li>
+      <li><a href="#health">Health and other sensitive information</a></li>
+      <li><a href="#use">How we use your data and our lawful bases</a></li>
+      <li><a href="#share">Who we share your data with</a></li>
+      <li><a href="#transfers">International transfers</a></li>
+      <li><a href="#retention">How long we keep your data</a></li>
+      <li><a href="#security">How we keep your data secure</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#cookies">Cookies and third-party content</a></li>
+      <li><a href="#age">Age</a></li>
+      <li><a href="#changes">Changes and complaints</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="who">
+    <h2><span class="n">1.</span>Who we are</h2>
+    <p>Rebloom is run by Nes, trading as Rebloom, in the United Kingdom. In this notice, "Rebloom", "we", "us" and "our" mean Nes trading as Rebloom.</p>
+    <p>We are the <span class="k">data controller</span> for the personal data described in this notice. This means we decide how and why your personal data is used and are responsible for protecting it.</p>
+    <p><span class="k">Contact:</span> for any question about this notice or your personal data, email <a href="mailto:hello@rebloomwithnes.co.uk">hello@rebloomwithnes.co.uk</a>.</p>
   </section>
 
-  <section class="card">
-    <h2>What I collect</h2>
+  <section class="card" id="collect">
+    <h2><span class="n">2.</span>Personal data we collect</h2>
+    <p>We collect personal data directly from you. We do not buy personal data or obtain it from third parties.</p>
+    <h3>When you claim a spot</h3>
+    <ul><li>Your email address.</li></ul>
+    <h3>When you complete the sign-up questions</h3>
     <ul>
-      <li><span class="k">When you claim a spot:</span> your email address.</li>
-      <li><span class="k">If you answer the next questions:</span> your first name, the area you'd like to start with, which pattern sounds most like you, why now (if you share it), how you'd like me to call you, and your phone or WhatsApp number (if you share it).</li>
-      <li><span class="k">If you send a message:</span> your name (if you give it), your email address and what you write.</li>
-      <li><span class="k">If you join a group:</span> your daily check-in photos and messages in the group, and what you share on our calls.</li>
+      <li>Your first name.</li>
+      <li>Your answers to the sign-up questions: the area you would like to focus on (Mind, Move, Nourish or Rest), the statement that best describes you and, if you choose to share it, why now.</li>
+      <li>How you would prefer to be contacted for a call and, if you provide it, your phone or WhatsApp number.</li>
+      <li>Your confirmation that we may contact you about a call.</li>
     </ul>
-    <p>Please don't share health details in the forms. If something comes up on a call, I won't write it down unless you ask me to.</p>
-  </section>
-
-  <section class="card">
-    <h2>Why I use it</h2>
+    <h3>When you send us a message</h3>
+    <ul><li>Your name (optional), your email address, the topic you select and the content of your message.</li></ul>
+    <h3>When you book a call</h3>
+    <ul><li>The name, email address and appointment details you enter in the booking calendar.</li></ul>
+    <h3>When you take part in a programme</h3>
     <ul>
-      <li><span class="k">To reply to you and arrange our 15-minute call.</span> You've asked me to, and I need your details to do it.</li>
-      <li><span class="k">To send you the mini-guide and occasional emails about Rebloom.</span> Only because you gave me your email for this. Reply "unsubscribe" any time and I'll stop.</li>
-      <li><span class="k">To run your 30 days.</span> Setting up your group, your buddy, your progress and our Sunday reflections.</li>
+      <li>Your goal, your progress and your attendance at calls and Sunday reflections.</li>
+      <li>The photos and messages you post in your group, including your WhatsApp display name, profile photo and phone number, which are visible to other members of your group.</li>
+      <li>Notes from calls, kept to the minimum needed to support you.</li>
     </ul>
-    <p>I never sell your details, and I don't use them for advertising.</p>
+    <h3>When you message us on Instagram</h3>
+    <ul><li>Your Instagram username and the content of your messages.</li></ul>
   </section>
 
-  <section class="card">
-    <h2>Who helps me</h2>
-    <p>A few services help me run Rebloom. They only use your details to do that job for me.</p>
+  <section class="card" id="health">
+    <h2><span class="n">3.</span>Health and other sensitive information</h2>
+    <p>Some information, such as information about your physical or mental health, is "special category data" under UK GDPR and needs extra protection.</p>
+    <p>We do not ask for health information, and we ask you not to include it in our forms. Because Rebloom supports goals relating to wellbeing, you may choose to share health information during calls or in your group. Where you do, we will only use it with your <span class="k">explicit consent</span>, only to support your participation, and we will not record it unless you ask us to. You can withdraw your consent at any time.</p>
+    <p>If we become seriously concerned for your safety or someone else's, we may share limited information with emergency services where necessary to protect life.</p>
+  </section>
+
+  <section class="card" id="use">
+    <h2><span class="n">4.</span>How we use your data and our lawful bases</h2>
+    <p>We only use your personal data where we have a lawful basis to do so.</p>
+    <div class="basis">
+      <p class="k">Responding to your enquiries and messages</p>
+      <p class="lb"><b>Legitimate interests:</b> to answer questions about Rebloom that you have sent us.</p>
+    </div>
+    <div class="basis">
+      <p class="k">Processing your sign-up and arranging your introductory call</p>
+      <p class="lb"><b>Steps taken at your request before entering into a contract.</b></p>
+    </div>
+    <div class="basis">
+      <p class="k">Sending you the mini-guide and emails about Rebloom</p>
+      <p class="lb"><b>Consent:</b> given when you submit your email address. You can unsubscribe at any time by replying "unsubscribe" to any email.</p>
+    </div>
+    <div class="basis">
+      <p class="k">Delivering your programme: matching you to a group and buddy, running calls and Sunday reflections, and tracking your progress</p>
+      <p class="lb"><b>Performance of a contract</b> with you.</p>
+    </div>
+    <div class="basis">
+      <p class="k">Using health information you choose to share</p>
+      <p class="lb"><b>Explicit consent</b> (see section 3).</p>
+    </div>
+    <div class="basis">
+      <p class="k">Protecting someone's safety in an emergency</p>
+      <p class="lb"><b>Vital interests.</b></p>
+    </div>
+    <div class="basis">
+      <p class="k">Keeping records we are required to keep, and handling disputes</p>
+      <p class="lb"><b>Legal obligation</b> and <b>legitimate interests</b>.</p>
+    </div>
+    <p style="margin-top:12px">We do not sell your personal data, use it for advertising or make decisions about you by automated means, including profiling.</p>
+  </section>
+
+  <section class="card" id="share">
+    <h2><span class="n">5.</span>Who we share your data with</h2>
+    <p>We use trusted service providers to run Rebloom. They process personal data on our behalf and under our instructions, and may not use it for their own purposes.</p>
     <ul>
-      <li><span class="k">Cloudflare</span> hosts this website and runs the forms.</li>
-      <li><span class="k">Resend</span> sends the emails and keeps the sign-up list.</li>
-      <li><span class="k">Google Calendar</span> is where you book our call.</li>
-      <li><span class="k">WhatsApp</span> is where the groups happen. Everyone in your group can see your WhatsApp name, profile photo and phone number. You can hide your profile photo in WhatsApp's own privacy settings.</li>
-      <li><span class="k">Instagram</span>, if you message me there.</li>
+      <li><span class="k">Cloudflare</span>: website hosting and processing of form submissions.</li>
+      <li><span class="k">Resend</span>: sending emails and storing our sign-up list.</li>
+      <li><span class="k">Google</span>: appointment booking (Google Calendar) and web fonts used on this website.</li>
     </ul>
-    <p>Some of these companies store data outside the UK. When they do, they use the legal safeguards UK law requires.</p>
+    <p>Rebloom groups take place on <span class="k">WhatsApp</span>, and we also respond to messages on <span class="k">Instagram</span>. Both are provided by Meta, which acts as an independent controller of the data you share on those platforms under its own privacy policies.</p>
+    <p><span class="k">Other members of your group</span> will see the photos, messages and WhatsApp details you share with the group. Members agree to keep what is shared in the group private and not to screenshot or share others' content.</p>
+    <p>We may also disclose personal data where required by law, or to emergency services where necessary to protect someone's life.</p>
   </section>
 
-  <section class="card">
-    <h2>Your photos and the group</h2>
-    <p>Only your small group, your buddy and I see your photos. We all agree that what's shared in the group stays in the group, and that nobody screenshots or shares another person's photos or messages.</p>
-    <p>You can delete your own photos and messages in WhatsApp at any time, and you can leave the group whenever you like.</p>
+  <section class="card" id="transfers">
+    <h2><span class="n">6.</span>International transfers</h2>
+    <p>Some of our service providers store or process personal data outside the UK, including in the United States and the European Economic Area. Where this happens, we rely on transfer mechanisms recognised under UK law, such as UK adequacy regulations, the UK Extension to the EU–US Data Privacy Framework, or the International Data Transfer Agreement or Addendum issued by the Information Commissioner's Office.</p>
   </section>
 
-  <section class="card">
-    <h2>How long I keep it</h2>
-    <p>I keep your details while you're on the list or taking part, and for up to 12 months after we were last in touch, so I can follow up on your next season. After that I delete them. You can ask me to delete them sooner at any time.</p>
+  <section class="card" id="retention">
+    <h2><span class="n">7.</span>How long we keep your data</h2>
+    <p>We keep personal data only for as long as we need it for the purposes described above.</p>
+    <table class="ret">
+      <tr><th>Enquiries and messages</th><td>Up to 12 months after our last contact.</td></tr>
+      <tr><th>Sign-up details and mailing list</th><td>Until you unsubscribe or ask us to delete them, or 12 months after our last contact, whichever is sooner.</td></tr>
+      <tr><th>Programme records and call notes</th><td>Up to 12 months after your programme ends, so we can support you in a future season.</td></tr>
+      <tr><th>Financial records (if payments are taken in future)</th><td>Six years, as required by law.</td></tr>
+    </table>
+    <p style="margin-top:12px">Messages and photos in WhatsApp groups remain on members' devices. You can delete your own messages and leave a group at any time.</p>
   </section>
 
-  <section class="card">
-    <h2>Cookies</h2>
-    <p>This website doesn't use tracking or advertising cookies, and doesn't follow you around the internet.</p>
+  <section class="card" id="security">
+    <h2><span class="n">8.</span>How we keep your data secure</h2>
+    <p>We use appropriate technical and organisational measures to protect your personal data. These include encrypted connections to this website, access restricted to Rebloom only, reputable service providers with their own security controls, and collecting no more personal data than we need. If a personal data breach occurs that is likely to put your rights at risk, we will tell you and, where required, the Information Commissioner's Office.</p>
   </section>
 
-  <section class="card">
-    <h2>Your rights</h2>
-    <p>You can ask me to:</p>
+  <section class="card" id="rights">
+    <h2><span class="n">9.</span>Your rights</h2>
+    <p>Under UK data protection law you have the right to:</p>
     <ul>
-      <li>show you the details I hold about you</li>
-      <li>correct anything that's wrong</li>
-      <li>delete your details</li>
-      <li>stop emailing you, or stop using your details</li>
+      <li><span class="k">access</span> the personal data we hold about you</li>
+      <li>have inaccurate data <span class="k">corrected</span></li>
+      <li>have your data <span class="k">erased</span></li>
+      <li><span class="k">restrict</span> how we use your data</li>
+      <li><span class="k">object</span> to our use of your data where we rely on legitimate interests</li>
+      <li>receive your data in a portable format (<span class="k">data portability</span>)</li>
+      <li><span class="k">withdraw consent</span> at any time, without affecting anything we did before you withdrew it</li>
     </ul>
-    <p>Just email <a href="mailto:hello@rebloomwithnes.co.uk">hello@rebloomwithnes.co.uk</a>. I'll reply within a month, and usually much sooner.</p>
-    <p>If you're unhappy with how I've handled your details, please tell me first so I can put it right. You can also complain to the Information Commissioner's Office at <a href="https://ico.org.uk/make-a-complaint/">ico.org.uk</a> or on 0303 123 1113.</p>
+    <p>To exercise any of these rights, email <a href="mailto:hello@rebloomwithnes.co.uk">hello@rebloomwithnes.co.uk</a>. There is normally no charge. We will respond within one month, and may need to confirm your identity first.</p>
+  </section>
+
+  <section class="card" id="cookies">
+    <h2><span class="n">10.</span>Cookies and third-party content</h2>
+    <p>This website does not use analytics, advertising or tracking cookies.</p>
+    <p>To display our fonts, your browser connects to Google Fonts, which receives your IP address. Links to Instagram and other websites are governed by those websites' own privacy policies.</p>
+  </section>
+
+  <section class="card" id="age">
+    <h2><span class="n">11.</span>Age</h2>
+    <p>Rebloom is intended for adults aged 18 and over. We do not knowingly collect personal data from anyone under 18. If you believe we have, please contact us and we will delete it.</p>
+  </section>
+
+  <section class="card" id="changes">
+    <h2><span class="n">12.</span>Changes to this notice and complaints</h2>
+    <p>We may update this notice from time to time. The latest version will always be available on this page, with the date it takes effect. Where changes are significant, we will let you know.</p>
+    <p>If you have a concern about how we handle your personal data, please contact us first so we can try to resolve it. You also have the right to complain to the Information Commissioner's Office (ICO), the UK's data protection regulator: <a href="https://ico.org.uk/make-a-complaint/">ico.org.uk/make-a-complaint</a> or 0303 123 1113.</p>
   </section>
 
   <div class="care">
     <p style="margin:0">Rebloom isn't therapy or medical advice. If you're struggling right now, Samaritans are free, any time, on <a href="tel:116123">116 123</a> (UK). In an emergency, call 999.</p>
   </div>
-
-  <p><span class="hand">Nes x</span></p>
 </main>
 
 <footer>
-  <div class="wrap">© 2026 Rebloom · rebloomwithnes.co.uk · <a href="/">Home</a></div>
+  <div class="wrap">Rebloom Privacy Notice · Version 1.0 · November 2026 · rebloomwithnes.co.uk<span class="noprint"> · <a href="/">Home</a></span></div>
 </footer>
 </body>
 </html>
